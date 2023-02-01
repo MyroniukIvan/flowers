@@ -6,18 +6,42 @@ import rose from './assets/bgImgRose.svg'
 import pink from './assets/bgImgPink.svg'
 import yellow from './assets/bgImgYellow.svg'
 import wall from './assets/bgImgWall.svg'
+import treats from './assets/treats.svg'
+import flowers from './assets/flowers.svg'
 
 const Index = () => {
     return (
+        <>
         <div className={styles.imgContainer}>
-            <Image src={rose} alt={'rose'} width={697} height={650}/>
+            <div className={styles.relative}>
+                <Image src={rose} alt={'rose'} width={697} height={670}/>
+                <p className={styles.pRight}>Скидки <span>-6%</span> на все букеты <span>по предзаказу</span> на 8 марта
+                </p>
+            </div>
             <div className={styles.imgContainerSecondary}>
-                <Image src={redBg} alt={'red'} width={336} height={321}/>
-                <Image src={pink} alt={'pink'} width={336} height={321}/>
-                <Image src={yellow} alt={'yellow'} width={336} height={321}/>
-                <Image src={wall} alt={'wall'} width={336} height={321}/>
+                <div className={styles.relative}>
+                    <Image src={redBg} alt={'red'} width={336} height={321}/>
+                    <p className={styles.pLeft}>Розы</p>
+                </div>
+                <div className={styles.relative}>
+                    <Image src={pink} alt={'pink'} width={336} height={321}/>
+                    <p className={styles.pLeft}>Подарки</p>
+                </div>
+                <div className={styles.relative}>
+                    <Image src={yellow} alt={'yellow'} width={336} height={321}/>
+                    <Image className={styles.absolute} src={treats} alt={'treats'}/>
+                    <p className={styles.pLeft}>Подарочные корзины</p>
+                </div>
+                <div className={styles.relative}>
+                    <Image src={wall} alt={'wall'} width={336} height={321}/>
+                    <Image className={styles.absolute} src={flowers} alt={'flowers'}/>
+                    <p className={styles.pLeft}>Цветы в коробке</p>
+                </div>
             </div>
         </div>
+            <div>
+            </div>
+    </>
     );
 };
 

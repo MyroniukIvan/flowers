@@ -1,12 +1,56 @@
 .imgContainer {
+  position: relative;
   padding: 10px;
   align-items: flex-start;
   display: flex;
   flex-direction: row;
   gap: 28px;
+
+
   .imgContainerSecondary {
     display: flex;
     flex-wrap: wrap;
     gap: 21px;
+  }
+}
+
+.relative {
+  position: relative;
+
+  .absolute {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    overflow: hidden;
+  }
+  .pLeft {
+    line-height: 40px;
+    padding-top: 32px;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-weight: 700;
+    font-size: 36px;
+    color: #333333;
+
+  }
+
+  .pRight {
+    padding-top: 24px;
+    width: 412px;
+    height: 110px;
+    position: absolute;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 50px;
+    word-wrap: break-word;
+    white-space: initial;
+    color: #333333;
+    top: 8px;
+    right: 16px;
+
+    span {
+      color: white;
+    }
   }
 }
