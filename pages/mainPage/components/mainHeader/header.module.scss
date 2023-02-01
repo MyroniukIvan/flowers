@@ -1,0 +1,35 @@
+.headerMain {
+  white-space: nowrap;
+  font-size: 16px;
+  color: white;
+  line-height: 18px;
+  background: #333333;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    color: #956D84;
+  }
+
+  .headerMainFlexbox {
+    margin-right: 229px;
+    margin-left: 250px;
+    display: flex;
+    gap: 64px;
+  }
+
+  .secondaryFlexbox {
+    justify-content: space-around;
+    gap: 12px;
+    display: flex;
+  }
+
+  .headerMainRegistration {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    padding-right: 254px;
+  }
+}

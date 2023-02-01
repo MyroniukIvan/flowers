@@ -1,0 +1,74 @@
+.mainFlexbox {
+  padding-top: 28px;
+  padding-left: 4px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 55px;
+}
+
+.outerFlexbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.innerFlexbox {
+  gap: 21px;
+  display: flex;
+  flex-direction: row;
+}
+
+.secondaryFlexBox {
+  display: flex;
+  flex-direction: row;
+  gap: 53px;
+  padding-top: 47px;
+}
+
+.input {
+  font-size: 14px;
+  line-height: 18px;
+  color: #828282;
+  padding: 8px;
+  background: white;
+  height: 26px;
+  width: 219px;
+  border: 0 solid #956D84;
+  border-bottom-width: 1px;
+  outline: none;
+}
+
+.inputSecond {
+  font-size: 14px;
+  line-height: 18px;
+  color: #828282;
+  padding: 8px;
+  background: white;
+  height: 26px;
+  width: 510px;
+  border: 0 solid #956D84;
+  border-bottom-width: 1px;
+  outline: none;
+}
+
+.inputSecondIcon {
+  right: 5px;
+  position: absolute;
+}
+.inputSecondBlock {
+  position: relative;
+}
+
+.icons {
+  display: flex;
+  gap: 13px;
+  padding-bottom: 19px;
+}
+
+.iconsSecondary {
+  display: flex;
+  align-items: center;
+  padding-top: 27px;
+  gap: 26px;
+}
