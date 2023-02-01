@@ -1,0 +1,12 @@
+.imgContainer {
+  padding: 10px;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  .imgContainerSecondary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 21px;
+  }
+}
