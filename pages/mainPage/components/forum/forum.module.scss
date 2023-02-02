@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 500px;
+  align-items: center;
+  padding-bottom: 60px;
+  padding-top: 141px;
+  .h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 18px;
+    color: #000000;
+  }
+  .p {
+    margin-right: 10px;
+    border: none;
+    background: white;
+    cursor: pointer;
+  }
+}
+
+
+.forumContainerWrapper{
+  display: flex;
+  gap: 21px;
+  padding-top: 43px;
+  padding-left: 10px;
+  .forumContainer {
+    height: 371px;
+    width: 460px;
+    background: #956D84;
+    .forumContainerImg{
+      position: relative;
+      bottom: 50px;
+      left: 25px;
+    }
+  }
+}

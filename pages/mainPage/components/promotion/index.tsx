@@ -3,6 +3,8 @@ import styles from './promotion.module.scss'
 import Image from "next/image";
 import vLeft from '../promotion/assets/Vectorleft.svg'
 import vRight from '../promotion/assets/VectorRight.svg'
+import Button from "../../../../src/components/button/button";
+import Link from "next/link";
 
 const data = [
     {
@@ -114,7 +116,14 @@ const Index = () => {
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div className={styles.center}>
+                                        <Button label={'Заказать'}/>
+                                    </div>
+                                    <div className={styles.center}>
+                                        <Link href={''} className={styles.link}>
+                                            Быстрый заказ
+                                        </Link>
+                                    </div>
                                     {/*    buttons */}
                                 </div>
 
