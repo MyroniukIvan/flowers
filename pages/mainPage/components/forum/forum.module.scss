@@ -31,7 +31,6 @@
   .forumContainer {
     position: relative;
     height: 460px;
-    color: white;
     width: 460px;
     background: #956D84;
 
@@ -43,12 +42,15 @@
       padding-right: 19px;
 
       .forumContainerHeader {
+        color: white;
         font-weight: 300;
         font-size: 24px;
         line-height: 25px;
+        padding-bottom: 25px;
       }
 
       .forumContainerSubheader {
+        color: #FFFFFF;
         font-weight: 250;
         font-size: 16px;
         line-height: 18px;

@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
-import styles from './MainPage.module.scss'
-import Header from './components/mainHeader'
-import SubHeader from "./components/subHeader";
 import ImagesContainer from "./components/imagesContainer";
 import Promotion from "./components/promotion";
 import Forum from "./components/forum";
+import Map from './components/map'
 import {motion} from "framer-motion";
 import Cursor from "../../src/components/cursor";
 
@@ -22,6 +20,7 @@ const Index = () => {
                 <Promotion/>
                 <Promotion/>
                 <Forum/>
+                <Map/>
                 <Cursor cursorVariant={cursorVariant}/>
             </motion.div>
         </div>

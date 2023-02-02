@@ -18,13 +18,13 @@ const Cursor: React.FC<{ cursorVariant: string }> = ({cursorVariant}) => {
 
     const variants = {
         default: {
-            x: mousePosition.x - 10,
-            y: mousePosition.y - 10,
+            x: mousePosition.x - 5,
+            y: mousePosition.y - 5,
             top: 0,
         },
         click: {
-            x: mousePosition.x - 10,
-            y: mousePosition.y - 10,
+            x: mousePosition.x - 5,
+            y: mousePosition.y - 5,
             top: 0,
             height: 30,
             width: 30,

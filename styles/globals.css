@@ -14,7 +14,7 @@
 
 html,
 body {
-    background: url("../pages/mainPage/assets/flowersBg.svg") no-repeat;
+    background: url("../pages/mainPage/assets/flowersBg.svg") repeat-y;
     font-family: 'Museo Sans Cyrl', sans-serif;
     overflow-x: hidden;
 }
@@ -22,6 +22,9 @@ body {
 body {
     cursor: none !important;
     color: revert;
+}
+iframe {
+    cursor: none !important;
 }
 
 a {
@@ -41,7 +44,7 @@ input {
 
 @media (prefers-color-scheme: dark) {
     html {
-        color-scheme: dark;
+
     }
 }
 
