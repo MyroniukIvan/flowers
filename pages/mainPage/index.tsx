@@ -17,8 +17,6 @@ const Index = () => {
                 onMouseUp={() => setCursorVariant('default')}
                 style={{height: "100%"}}
             >
-                <Header/>
-                <SubHeader/>
                 <ImagesContainer/>
                 <Promotion/>
                 <Promotion/>
