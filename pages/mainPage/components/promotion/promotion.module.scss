@@ -1,0 +1,94 @@
+.parent {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.child {
+  cursor: pointer;
+  margin: 21px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #956D84;
+  flex: 1 1 21%; /* explanation below */
+  background-color: white;
+
+  &:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+
+  }
+
+  .absolute {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 17px 5px 18px 10px;
+    border-radius: 100%;
+    border: 1px dashed #E72222;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+
+  .imgContainer {
+    position: relative;
+    background: rgba(149, 109, 132, 0.22);
+  }
+
+  span {
+    color: #956D84;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.innerFlex {
+  padding: 26px;
+  text-align: left;
+  justify-content: space-between;
+  display: flex;
+
+  .name {
+    word-break: break-word;
+    width: 125px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 18px;
+    color: #333333;
+  }
+
+  .textBlock {
+    padding-bottom: 40px;
+
+    .text {
+      align-items: center;
+      text-decoration-line: line-through;
+      /* Gray 4 */
+      color: #BDBDBD;
+    }
+  }
+}
+.header {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 18px;
+  padding-bottom: 36px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 520px;
+  padding-right: 20px;
+  padding-top: 115px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 27px;
+  button {
+    outline: none;
+    border: none;
+    background: white;
+    cursor: pointer;
+  }
+}

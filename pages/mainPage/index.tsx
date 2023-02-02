@@ -3,6 +3,7 @@ import styles from './MainPage.module.scss'
 import Header from './components/mainHeader'
 import SubHeader from "./components/subHeader";
 import ImagesContainer from "./components/imagesContainer";
+import Promotion from "./components/promotion";
 
 const Index = () => {
     return (
@@ -10,6 +11,7 @@ const Index = () => {
             <Header/>
             <SubHeader/>
             <ImagesContainer/>
+            <Promotion/>
         </div>
     );
 };

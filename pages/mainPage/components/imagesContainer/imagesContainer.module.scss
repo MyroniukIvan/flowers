@@ -1,4 +1,5 @@
 .imgContainer {
+
   position: relative;
   padding: 10px;
   align-items: flex-start;
@@ -34,6 +35,17 @@
     color: #333333;
 
   }
+  .pLeftBottom {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 35px;
+    width: 213px;
+    padding-bottom: 32px;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: #333333;
+  }
 
   .pRight {
     padding-top: 24px;
@@ -53,4 +65,19 @@
       color: white;
     }
   }
+}
+
+.deliveryBlock {
+  width: 100%;
+  position: relative;
+  padding-left: 10px;
+  .deliveryBlockDescription {
+    padding-top: 7px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.heartPic {
 }
