@@ -30,23 +30,32 @@ const Index = () => {
                 <div className={styles.header}>
                     <p className={styles.h1}>Форум</p>
                     <button className={styles.p}>
-                        <Image  src={btnImg} alt={'btn'}/>
+                        <Image src={btnImg} alt={'btn'}/>
                     </button>
-                    </div>
+                </div>
             </div>
             <div className={styles.forumContainerWrapper}>
                 {data.map((el, index) => {
                     return (
                         <div key={index} className={styles.forumContainer}>
-                            <Image className={styles.forumContainerImg} src={require('./assets/' + `${el.src}` + '.svg')} alt={'forum image'} width={412} height={343}/>
-                            {el.header}
-                            {el.subheader}
+                            <Image className={styles.forumContainerImg}
+                                   src={require('./assets/' + `${el.src}` + '.svg')} alt={'forum image'} width={412}
+                                   height={343}/>
+                            <div className={styles.forumContainerBox}>
+                                <div className={styles.forumContainerHeader}>
+                                    {el.header}
+                                </div>
+                                <div className={styles.forumContainerSubheader}>
+                                    {el.subheader}
+                                </div>
+                            </div>
                         </div>
                     )
                 })}
             </div>
         </div>
     );
-};
+}
+    ;
 
-export default Index;
+    export default Index;

@@ -5,31 +5,57 @@
   align-items: center;
   padding-bottom: 60px;
   padding-top: 141px;
+
   .h1 {
     font-weight: 700;
     font-size: 48px;
     line-height: 18px;
     color: #000000;
   }
+
   .p {
     margin-right: 10px;
     border: none;
     background: white;
-    cursor: pointer;
   }
 }
 
 
-.forumContainerWrapper{
+.forumContainerWrapper {
+
   display: flex;
   gap: 21px;
   padding-top: 43px;
   padding-left: 10px;
+
   .forumContainer {
-    height: 371px;
+    position: relative;
+    height: 460px;
+    color: white;
     width: 460px;
     background: #956D84;
-    .forumContainerImg{
+
+    .forumContainerBox {
+      padding-bottom: 29px;
+      position: absolute;
+      bottom: 0;
+      padding-left: 14px;
+      padding-right: 19px;
+
+      .forumContainerHeader {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 25px;
+      }
+
+      .forumContainerSubheader {
+        font-weight: 250;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+
+    .forumContainerImg {
       position: relative;
       bottom: 50px;
       left: 25px;
