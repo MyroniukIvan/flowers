@@ -7,6 +7,7 @@ import heart from './assets/heart.svg'
 import truck from './assets/truck.svg'
 import phone from './assets/phone.svg'
 import user from './assets/user.svg'
+import Link from "next/link";
 
 const Index = () => {
     return (
@@ -39,7 +40,7 @@ const Index = () => {
             </div>
             <div className={styles.headerMainRegistration}>
                 <Image src={user} alt={'user'}/>
-                <p>Вход</p> <Image style={{paddingTop: '5px'}} src={line} alt="line"/> <p>Регистрация</p>
+                <Link href='/login'>Вход</Link> <Image style={{paddingTop: '5px'}} src={line} alt="line"/> <Link href='/auth'>Регистрация</Link>
             </div>
         </div>
     );

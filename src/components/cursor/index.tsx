@@ -35,7 +35,7 @@ const Cursor: React.FC<{ cursorVariant: string }> = ({cursorVariant}) => {
     return (
         <motion.div
             style={{
-                animationDelay: '0,5s',
+                animationDelay:'0.1s',
                 background: "black",
                 height: '15px',
                 width: '15px',
