@@ -79,10 +79,10 @@ const Index = () => {
                     </div>
                     <div className={styles.buttons}>
                         <button>
-                           <Image src={vLeft} alt={'vleft'}/>
+                            <Image src={vLeft} alt={'vector left'}/>
                         </button>
                         <button>
-                           <Image src={vRight} alt={'vRight'}/>
+                            <Image src={vRight} alt={'vector right'}/>
                         </button>
                     </div>
                 </div>
@@ -126,14 +126,11 @@ const Index = () => {
                                     </div>
                                     {/*    buttons */}
                                 </div>
-
                             </div>
                         )
                     })}
                 </div>
             </>
         );
-    }
-;
-
+    };
 export default Index;

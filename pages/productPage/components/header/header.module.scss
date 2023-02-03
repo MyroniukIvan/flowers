@@ -9,15 +9,16 @@
   align-items: center;
   justify-content: center;
 
-  span {
-    color: #956D84;
-  }
 
   .headerMainFlexbox {
     margin-right: 229px;
     margin-left: 250px;
     display: flex;
     gap: 64px;
+
+    span {
+      color: #956D84;
+    }
   }
 
   .secondaryFlexbox {

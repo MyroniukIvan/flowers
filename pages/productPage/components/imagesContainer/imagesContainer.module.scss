@@ -1,5 +1,4 @@
 .imgContainer {
-
   position: relative;
   padding: 10px;
   align-items: flex-start;
@@ -24,7 +23,8 @@
     right: 0;
     overflow: hidden;
   }
-  .pLeft {
+
+  .alignTextLeft {
     line-height: 40px;
     padding-top: 32px;
     position: absolute;
@@ -35,7 +35,8 @@
     color: #333333;
 
   }
-  .pLeftBottom {
+
+  .alignTextLeftBottom {
     font-weight: 300;
     font-size: 24px;
     line-height: 35px;
@@ -47,7 +48,7 @@
     color: #333333;
   }
 
-  .pRight {
+  .alignTextRightBottom {
     padding-top: 24px;
     width: 412px;
     height: 110px;
@@ -71,6 +72,7 @@
   width: 100%;
   position: relative;
   padding-left: 10px;
+
   .deliveryBlockDescription {
     padding-top: 7px;
     font-weight: 300;

@@ -40,7 +40,9 @@ const Index = () => {
             </div>
             <div className={styles.headerMainRegistration}>
                 <Image src={user} alt={'user'}/>
-                <Link href='/login'>Вход</Link> <Image style={{paddingTop: '5px'}} src={line} alt="line"/> <Link href='/auth'>Регистрация</Link>
+                <Link href='/login'>Вход</Link>
+                <Image style={{paddingTop: '5px'}} src={line} alt="line"/>
+                <Link href='/auth'>Регистрация</Link>
             </div>
         </div>
     );

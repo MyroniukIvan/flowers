@@ -41,7 +41,6 @@ const Cursor: React.FC<{ cursorVariant: string }> = ({cursorVariant}) => {
                 width: '15px',
                 borderRadius: "50%",
                 position: 'fixed',
-                left: '0',
                 pointerEvents: 'none'
             }}
             variants={variants}

@@ -14,13 +14,13 @@
 
 html,
 body {
-    background: url("../pages/mainPage/assets/flowersBg.svg") repeat-y;
+    cursor: none !important;
+    background: url("../pages/productPage/assets/flowersBg.svg") repeat-y;
     font-family: 'Museo Sans Cyrl', sans-serif;
     overflow-x: hidden;
 }
 
 body {
-    cursor: none !important;
     color: revert;
 }
 iframe {
@@ -44,7 +44,7 @@ input {
 
 @media (prefers-color-scheme: dark) {
     html {
-
+        background: #5a5a5a;
     }
 }
 
