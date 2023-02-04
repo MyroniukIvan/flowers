@@ -9,7 +9,7 @@ import phone from './assets/phone.svg'
 import user from './assets/user.svg'
 import Link from "next/link";
 import {signOut} from "@firebase/auth";
-import {auth} from "../../../../firebase/config";
+import {auth} from "../../../firebase/config";
 import {useRouter} from "next/navigation";
 
 const Index = () => {

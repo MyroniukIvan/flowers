@@ -20,7 +20,7 @@ const Index = () => {
 
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                navigate.push('/mainPage')
+                navigate.push('/productPage')
             })
             .catch((error) => {
                 alert(error.message)
@@ -33,7 +33,7 @@ const Index = () => {
 
         signInWithPopup(auth, provider)
             .then((result) => {
-                navigate.push('/mainPage')
+                navigate.push('/productPage')
 
             }).catch((error) => {
             alert(error.message)

@@ -8,7 +8,7 @@ import instagram from './assets/instagram.svg'
 import logo from './assets/logo.svg'
 import search from './assets/search.svg'
 import cart from './assets/cart.svg'
-import heart from '../mainHeader/assets/heart.svg'
+import heart from '../header/assets/heart.svg'
 
 
 const Index = () => {
