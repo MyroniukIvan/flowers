@@ -8,8 +8,20 @@ import truck from './assets/truck.svg'
 import phone from './assets/phone.svg'
 import user from './assets/user.svg'
 import Link from "next/link";
+import {signOut} from "@firebase/auth";
+import {auth} from "../../../../firebase/config";
+import {useRouter} from "next/navigation";
 
 const Index = () => {
+    const navigate = useRouter()
+    const logoutUser = () => {
+        signOut(auth).then(() => {
+            navigate.push('/login')
+            alert('ok')
+        }).catch((error) => {
+            alert(error.message)
+        });
+    }
     return (
         <div className={styles.headerMain}>
             <div className={styles.headerMainFlexbox}>
@@ -40,7 +52,9 @@ const Index = () => {
             </div>
             <div className={styles.headerMainRegistration}>
                 <Image src={user} alt={'user'}/>
-                <Link href='/login'>Вход</Link> <Image style={{paddingTop: '5px'}} src={line} alt="line"/> <Link href='/auth'>Регистрация</Link>
+                <Link href='/login'>Вход</Link> <Image style={{paddingTop: '5px'}} src={line} alt="line"/>
+                <Link href='/auth'>Регистрация</Link>
+                <Link href='/' onClick={logoutUser}>Выход</Link>
             </div>
         </div>
     );

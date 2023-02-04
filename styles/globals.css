@@ -32,13 +32,23 @@ a {
     text-decoration: none;
 }
 
-button {
-    cursor: none !important;
-}
 
 input {
-    cursor: none !important;
 
+    width: 415px;
+    height: 68px;
+    border: 1px solid #E0E0E0;
+
+}
+
+.--btn-success {
+    margin-top: 20px;
+    color: #fff;
+    background: #956D84;
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+    width: 220px;
+    height: 63px;
 }
 
 @media (prefers-color-scheme: dark) {
