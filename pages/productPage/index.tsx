@@ -5,6 +5,7 @@ import Forum from "./components/forum";
 import Map from './components/map'
 
 
+
 const Index = () => {
     return (
         <div>
