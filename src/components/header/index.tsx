@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './header.module.scss'
 import Image from "next/image";
 
@@ -8,20 +8,46 @@ import truck from './assets/truck.svg'
 import phone from './assets/phone.svg'
 import user from './assets/user.svg'
 import Link from "next/link";
-import {signOut} from "@firebase/auth";
+import {onAuthStateChanged, signOut} from "@firebase/auth";
 import {auth} from "../../../firebase/config";
 import {useRouter} from "next/navigation";
+import {useDispatch} from "react-redux";
+import {
+    REMOVE_ACTIVE_USER,
+    SET_ACTIVE_USER
+} from "../../../redux/slice/authSlice";
+import ShowOnLogin from "../authLink";
+import {ShowOnLogout} from "../authLink";
 
 const Index = () => {
+
     const navigate = useRouter()
+
     const logoutUser = () => {
         signOut(auth).then(() => {
-            navigate.push('/login')
-            alert('ok')
+            navigate.push('/productPage')
         }).catch((error) => {
             alert(error.message)
         });
     }
+
+    const dispatch = useDispatch()
+    //перевіряєм чи юзер залогінений
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                dispatch(SET_ACTIVE_USER({
+                    email: user.email,
+                    userName: user.displayName,
+                    userId: user.uid,
+                }))
+            } else {
+                dispatch(REMOVE_ACTIVE_USER({}))
+            }
+        });
+    }, [dispatch])
+
+
     return (
         <div className={styles.headerMain}>
             <div className={styles.headerMainFlexbox}>
@@ -51,11 +77,17 @@ const Index = () => {
                 </div>
             </div>
             <div className={styles.headerMainRegistration}>
-                <Image src={user} alt={'user'}/>
-                <Link href='/login'>Вход</Link>
-                <Image style={{paddingTop: '5px'}} src={line} alt="line"/>
-                <Link href='/auth'>Регистрация</Link>
-                <Link href='/' onClick={logoutUser}>Выход</Link>
+                <ShowOnLogout>
+                    <Image src={user} alt={'user'}/>
+                    <Link href='/login'>Вход</Link>
+                    <Image style={{paddingTop: '5px'}} src={line} alt="line"/>
+                    <Link href='/auth'>Регистрация</Link>
+                </ShowOnLogout>
+
+                <ShowOnLogin>
+                    <Link href='/login' onClick={logoutUser}>Выход</Link>
+                </ShowOnLogin>
+
             </div>
         </div>
     );
