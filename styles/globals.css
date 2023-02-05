@@ -3,12 +3,14 @@
     --font-mono: Museo Sans Cyrl
 }
 
+
 * {
     scroll-behavior: auto;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+
 
 html,
 body {
@@ -18,8 +20,10 @@ body {
 }
 
 body {
+    background: url("../pages/productPage/assets/flowersBg.svg") repeat-y;
     color: revert;
 }
+
 
 a {
     color: inherit;
@@ -32,7 +36,6 @@ input {
     height: 68px;
     border: 1px solid #E0E0E0;
 }
-
 .--btn-success {
     margin-top: 20px;
     color: #fff;
@@ -44,5 +47,8 @@ input {
 }
 
 @media (prefers-color-scheme: dark) {
+    html {
+        background: #5a5a5a;
+    }
 }
 

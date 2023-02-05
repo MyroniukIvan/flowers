@@ -1,0 +1,38 @@
+.footer {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  color: #FFFFFF;
+  position: relative;
+  background: #333333;
+  height: 348px;
+
+  p:first-child {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .wrapper {
+    padding: 42px 250px 33px;
+    border-bottom: 1px solid #956D84;
+
+    .upper {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      gap: 95px;
+
+      .upperFlex {
+        gap: 95px;
+        display: flex;
+
+        .upperFlexColumn {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+  }
+}

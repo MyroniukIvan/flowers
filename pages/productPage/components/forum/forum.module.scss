@@ -22,7 +22,6 @@
 
 
 .forumContainerWrapper {
-
   display: flex;
   gap: 21px;
   padding-top: 43px;
@@ -33,6 +32,12 @@
     height: 460px;
     width: 460px;
     background: #956D84;
+
+    .forumContainerImg {
+      position: relative;
+      bottom: 50px;
+      left: 25px;
+    }
 
     .forumContainerBox {
       padding-bottom: 29px;
@@ -55,12 +60,6 @@
         font-size: 16px;
         line-height: 18px;
       }
-    }
-
-    .forumContainerImg {
-      position: relative;
-      bottom: 50px;
-      left: 25px;
     }
   }
 }

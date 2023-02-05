@@ -9,14 +9,15 @@ import logo from './assets/logo.svg'
 import search from './assets/search.svg'
 import cart from './assets/cart.svg'
 import heart from '../header/assets/heart.svg'
+import Link from "next/link";
 
 
 const Index = () => {
     return (
         <div className={styles.mainFlexbox}>
-            <div>
+            <Link href={'/'}>
                 <Image src={logo} alt={'logo'}/>
-            </div>
+            </Link>
             <div className={styles.outerFlexbox}>
 
                 {/*wrapper for inputs*/}
