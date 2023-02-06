@@ -10,6 +10,7 @@ import {
 } from "@firebase/auth";
 import {useRouter} from "next/navigation";
 import {auth} from "../../firebase/config";
+import Layout from "../../src/components/layout/Layout";
 
 const Index = () => {
     const [email, setEmail] = useState('');
@@ -64,23 +65,26 @@ const Index = () => {
             })
     }
     return (
-        <div className={styles.loginFormWrapper}>
-            <h2>Вход</h2>
-            <form onSubmit={loginUser}>
-                <input onChange={(e) => setEmail(e.target.value)}
-                       value={email} placeholder='Email' required
-                       type="email"/>
-                <input onChange={(e) => setPassword(e.target.value)}
-                       value={password} placeholder='Пароль' required
-                       type="password"/>
-                <button className='--btn-success' type="submit">вход
-                </button>
-            </form>
-            <button onClick={signInWithGoogle} className='--btn-success'>
-                <FaGoogle/></button>
-            <button onClick={signInFacebook} className='--btn-success'>
-                <FaFacebook/></button>
-        </div>
+        <Layout criteria={true}>
+            <div className={styles.loginFormWrapper}>
+                <h2>Вход</h2>
+                <form onSubmit={loginUser}>
+                    <input onChange={(e) => setEmail(e.target.value)}
+                           value={email} placeholder='Email' required
+                           type="email"/>
+                    <input onChange={(e) => setPassword(e.target.value)}
+                           value={password} placeholder='Пароль' required
+                           type="password"/>
+                    <button className='--btn-success' type="submit">вход
+                    </button>
+                </form>
+                <button onClick={signInWithGoogle} className='--btn-success'>
+                    <FaGoogle/></button>
+                <button onClick={signInFacebook} className='--btn-success'>
+                    <FaFacebook/></button>
+            </div>
+        </Layout>
+
     );
 }
 export default Index;

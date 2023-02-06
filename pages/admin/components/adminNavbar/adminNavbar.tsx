@@ -6,10 +6,8 @@ const Index = () => {
         <div>
             <nav className={styles.navbar}>
                 <ul className={styles.navbar__list}>
-                    <li className={styles.navbar__list_item}><Link href="admin/">Общее</Link></li>
-                    <li className={styles.navbar__list_item}><Link href="admin/components/allProducts">Товары</Link></li>
-                    <li className={styles.navbar__list_item}><Link href="admin/components/addProduct">Добавить товары</Link></li>
-                    <li className={styles.navbar__list_item}><Link href="admin/components/orders">Заказы</Link></li>
+                    <Link className={styles.navbar__list_item} href="/admin/order">Товары</Link>
+                    <Link className={styles.navbar__list_item} href="/admin/addProduct">Добавить товары</Link>
                 </ul>
             </nav>
         </div>
