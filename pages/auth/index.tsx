@@ -4,6 +4,7 @@ import {FaFacebook, FaGoogle} from "react-icons/fa";
 import {createUserWithEmailAndPassword} from "@firebase/auth";
 import {auth} from "../../firebase/config";
 import {useRouter} from "next/navigation";
+import Layout from "../../src/components/layout/Layout";
 
 const Index = () => {
     const [email, setEmail] = useState('');
@@ -26,17 +27,20 @@ const Index = () => {
             });
     }
     return (
-        <div className={styles.loginFormWrapper}>
-            <h2>Регистрация</h2>
-            <form onSubmit={registerUser}>
-                <input value={email} placeholder='Email' required type="email" onChange={(e)=>setEmail(e.target.value)}/>
+        <Layout criteria={true}>
+            <div className={styles.loginFormWrapper}>
+                <h2>Регистрация</h2>
+                <form onSubmit={registerUser}>
+                    <input value={email} placeholder='Email' required type="email" onChange={(e)=>setEmail(e.target.value)}/>
 
-                <input value={password} placeholder='Пароль' required type="password" onChange={(e)=>setPassword(e.target.value)}/>
-                <input value={cPassword} placeholder='Подтвердить пароль' required type="password" onChange={(e)=>setCPassword(e.target.value)}/>
-                <button className='--btn-success' type="submit">Зарегистрировать</button>
-            </form>
+                    <input value={password} placeholder='Пароль' required type="password" onChange={(e)=>setPassword(e.target.value)}/>
+                    <input value={cPassword} placeholder='Подтвердить пароль' required type="password" onChange={(e)=>setCPassword(e.target.value)}/>
+                    <button className='--btn-success' type="submit">Зарегистрировать</button>
+                </form>
 
-        </div>
+            </div>
+        </Layout>
+
     );
 }
 

@@ -12,7 +12,6 @@ export default function App({Component, pageProps}: AppProps) {
 
         <div>
             <Header/>
-            <SubHeader/>
             <Component {...pageProps} />
             <Footer/>
         </div>

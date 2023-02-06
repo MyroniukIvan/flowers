@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import React, {Component} from 'react';
-import AdminNavbar from "./components/adminNavbar/adminNavbar";
+import Layout from "../../src/components/layout/Layout";
+
 
 const Index = () => {
     return (
-        <div>
-            <div><AdminNavbar/></div>
+        <Layout criteria={false}>
             <div>
 
             </div>
-        </div>
+        </Layout>
     );
 }
 
