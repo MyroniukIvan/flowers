@@ -1,9 +1,10 @@
 .footer {
+  width: 100%;
   font-weight: 300;
   font-size: 16px;
   line-height: 18px;
   color: #FFFFFF;
-  position: relative;
+  position: absolute;
   background: #333333;
   height: 348px;
 
@@ -14,10 +15,10 @@
   }
 
   .wrapper {
-    padding: 42px 250px 33px;
     border-bottom: 1px solid #956D84;
 
     .upper {
+      padding: 45px 10px 33px;
       justify-content: center;
       align-items: center;
       display: flex;
@@ -35,4 +36,33 @@
       }
     }
   }
+}
+
+.lowerFlexInner {
+  gap: 300px;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 23px;
+  justify-content: space-between;
+  display: flex;
+
+  .lowerFlex {
+    align-items: center;
+    display: flex;
+    gap: 28px;
+  }
+}
+
+.length {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: 1416px;
 }
