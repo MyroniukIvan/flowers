@@ -1,8 +1,6 @@
-import SubHeader from "../subHeader";
 import AdminNavbar
-    from "../../../pages/admin/components/adminNavbar/adminNavbar";
-import {any} from "prop-types";
-import React, {ReactNode} from "react";
+    from "../../pages/admin/components/adminNavbar/adminNavbar";
+import React from "react";
 
 type DashboardLayoutProps = {
     children: React.ReactNode,
@@ -12,7 +10,7 @@ const Layout = ({children, criteria}:DashboardLayoutProps) => {
 
     return (
         <div>
-            {criteria ? <SubHeader/> : <AdminNavbar/>}
+            {criteria ? null : <AdminNavbar/>}
             {children}
         </div>
     );

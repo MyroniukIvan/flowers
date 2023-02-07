@@ -1,15 +1,14 @@
 import React from 'react';
 import styles from './map.module.scss'
 import Image from "next/image";
-import bg from './assets/mapBg.svg'
-import logo from '../../../../src/components/subHeader/assets/logo.svg'
-import instagram from '../../../../src/components/subHeader/assets/instagram.svg'
-import viber from '../../../../src/components/subHeader/assets/viber.svg'
-import facebook from '../../../../src/components/subHeader/assets/facebook.svg'
-import phone from './assets/phone.svg'
+import logo from '../../../../assets/logo.svg'
+import instagram from '../../../../assets/instagram.svg'
+import viber from '../../../../assets/viber.svg'
+import facebook from '../../../../assets/facebook.svg'
+import phone from '../../../../assets/phone.svg'
 
-import skype from './assets/skype (1) 1.svg'
-import mail from './assets/mail.svg'
+import skype from '../../../../assets/skype.svg'
+import mail from '../../../../assets/mail.svg'
 
 
 const Map = () => {
@@ -21,27 +20,27 @@ const Map = () => {
                         <Image src={logo} alt={'logo'}/>
                         <div className={styles.onMapCardFlexChild}>
                             <div>
-                                <div style={{display:'flex', gap:'9px'}}>
+                                <div style={{display: 'flex', gap: '9px'}}>
                                     <Image src={phone} alt={'phone'}/>
                                     <p>Телефон:</p>
                                 </div>
                                 <p>+38 (063) 829 30 30</p>
                                 <p>+38 (067) 829 30 30</p></div>
                             <div>
-                                <div style={{display:'flex', gap:'9px'}}>
+                                <div style={{display: 'flex', gap: '9px'}}>
                                     <Image src={skype} alt={'skype'}/>
                                     <p>Skype</p>
                                 </div>
                                 <p>Flowers-Ukraine</p>
                             </div>
                             <div>
-                                <div style={{display:'flex', gap:'9px'}}>
+                                <div style={{display: 'flex', gap: '9px'}}>
                                     <Image src={mail} alt={'mail'}/>
                                     <p>Почта</p>
                                 </div>
                                 <p>flowers.ukraine2014@gmail.com</p>
                             </div>
-                            <div style={{display:'flex', gap:'21px', paddingTop:'32px', paddingLeft:'12px'}}>
+                            <div style={{display: 'flex', gap: '21px', paddingTop: '32px', paddingLeft: '12px'}}>
                                 <Image src={instagram} alt={'instagram'}/>
                                 <Image src={viber} alt={'viber'}/>
                                 <Image src={facebook} alt={'facebook'}/>

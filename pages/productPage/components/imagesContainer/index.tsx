@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './imagesContainer.module.scss'
 import Image from "next/image";
-import redBg from './assets/bgImgRed.svg'
-import rose from './assets/bgImgRose.svg'
-import pink from './assets/bgImgPink.svg'
-import yellow from './assets/bgImgYellow.svg'
-import wall from './assets/bgImgWall.svg'
-import treats from './assets/treats.svg'
-import flowers from './assets/flowers.svg'
-import delivery from './assets/delivery.svg'
+import redBg from '../../../../assets/bgImgRed.svg'
+import rose from '../../../../assets/bgImgRose.svg'
+import pink from '../../../../assets/bgImgPink.svg'
+import yellow from '../../../../assets/bgImgYellow.svg'
+import wall from '../../../../assets/bgImgWall.svg'
+import treats from '../../../../assets/treats.svg'
+import flowers from '../../../../assets/flowers.svg'
+import delivery from '../../../../assets/delivery.svg'
 
 
 const Index = () => {

@@ -2,20 +2,20 @@ import React, {useEffect} from 'react';
 import styles from './header.module.scss'
 import Image from "next/image";
 
-import line from './assets/Line.svg'
-import heart from './assets/heart.svg'
-import truck from './assets/truck.svg'
-import phone from './assets/phone.svg'
-import user from './assets/user.svg'
+import line from '../../assets/Line.svg'
+import heart from '../../assets/heart.svg'
+import truck from '../../assets/truck.svg'
+import phone from '../../assets/phone.svg'
+import user from '../../assets/user.svg'
 import Link from "next/link";
 import {onAuthStateChanged, signOut} from "@firebase/auth";
-import {auth} from "../../../firebase/config";
+import {auth} from "../../firebase/config";
 import {useRouter} from "next/navigation";
 import {useDispatch} from "react-redux";
 import {
     REMOVE_ACTIVE_USER,
     SET_ACTIVE_USER
-} from "../../../redux/slice/authSlice";
+} from "../../redux/slice/authSlice";
 import ShowOnLogin from "../authLink";
 import {ShowOnLogout} from "../authLink";
 

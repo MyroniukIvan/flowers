@@ -1,14 +1,13 @@
 import React from 'react';
 import Image from "next/image";
 import styles from './subHeader.module.scss'
-
-import viber from './assets/viber.svg'
-import facebook from './assets/facebook.svg'
-import instagram from './assets/instagram.svg'
-import logo from './assets/logo.svg'
-import search from './assets/search.svg'
-import cart from './assets/cart.svg'
-import heart from '../header/assets/heart.svg'
+import viber from '../../assets/viber.svg'
+import facebook from '../../assets/facebook.svg'
+import instagram from '../../assets/instagram.svg'
+import logo from '../../assets/logo.svg'
+import search from '../../assets/search.svg'
+import cart from '../../assets/cart.svg'
+import heart from '../../assets/heart.svg'
 import Link from "next/link";
 
 
@@ -31,14 +30,14 @@ const Index = () => {
                     </div>
                 </div>
 
-                <div className={styles.secondaryFlexBox}>
+                {<div className={styles.secondaryFlexBox}>
                     <a href={''}>Каталог товаров</a>
                     <a href={''}>Форум</a>
                     <a href={''}>Отзывы</a>
                     <a href={''}>Акции</a>
                     <a href={''}>Новости</a>
                     <a href={''}>Информация</a>
-                </div>
+                </div>}
             </div>
             <div className={styles.outerFlexbox}>
                 <div className={styles.icons}>

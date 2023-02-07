@@ -4,7 +4,7 @@ import {FaFacebook, FaGoogle} from "react-icons/fa";
 import {createUserWithEmailAndPassword} from "@firebase/auth";
 import {auth} from "../../firebase/config";
 import {useRouter} from "next/navigation";
-import Layout from "../../src/components/layout/Layout";
+import Layout from "../../components/layout/Layout";
 
 const Index = () => {
     const [email, setEmail] = useState('');

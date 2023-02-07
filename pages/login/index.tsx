@@ -10,7 +10,7 @@ import {
 } from "@firebase/auth";
 import {useRouter} from "next/navigation";
 import {auth} from "../../firebase/config";
-import Layout from "../../src/components/layout/Layout";
+import Layout from "../../components/layout/Layout";
 
 const Index = () => {
     const [email, setEmail] = useState('');
@@ -33,7 +33,7 @@ const Index = () => {
     const signInWithGoogle = () => {
 
         signInWithPopup(auth, provider)
-            .then((result) => {
+            .then(() => {
                 navigate.push('/productPage')
 
             }).catch((error) => {

@@ -14,13 +14,13 @@
 
 html,
 body {
-    background: url("../pages/productPage/assets/flowersBg.svg") repeat-y;
+    background: url("../assets/flowersBg.svg") repeat-y;
     font-family: 'Museo Sans Cyrl', sans-serif;
     overflow-x: hidden;
 }
 
 body {
-    background: url("../pages/productPage/assets/flowersBg.svg") repeat-y;
+    background: url("../assets/flowersBg.svg") repeat-y;
     color: revert;
 }
 

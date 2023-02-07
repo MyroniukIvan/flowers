@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './forum.module.scss'
 import Image from "next/image";
-import btnImg from './assets/allnewsBtn.svg'
+import btnImg from '../../../../assets/allnewsBtn.svg'
 
 const data = [
     {
@@ -39,7 +39,7 @@ const Index = () => {
                     return (
                         <div key={index} className={styles.forumContainer}>
                             <Image className={styles.forumContainerImg}
-                                   src={require('./assets/' + `${el.src}` + '.svg')} alt={'forum image'} width={412}
+                                   src={require('../../../../assets/' + `${el.src}` + '.svg')} alt={'forum image'} width={412}
                                    height={343}/>
                             <div className={styles.forumContainerBox}>
                                 <div className={styles.forumContainerHeader}>

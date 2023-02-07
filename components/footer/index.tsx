@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './footer.module.scss'
 import Image from "next/image";
-import logo from './assets/image 27.svg'
+import logo from '../../assets/logoDarkMode.svg'
 
 const Index = () => {
     return (

@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './promotion.module.scss'
 import Image from "next/image";
-import vLeft from '../promotion/assets/Vectorleft.svg'
-import vRight from '../promotion/assets/VectorRight.svg'
-import Button from "../../../../src/components/button/button";
+import vLeft from '../../../../assets/Vectorleft.svg'
+import vRight from '../../../../assets/VectorRight.svg'
+import Button from "../../../../components/button/button";
 import Link from "next/link";
 
 const data = [
@@ -95,7 +95,7 @@ const Index = () => {
                                 {/*img container*/}
                                 <div>
                                     <div className={styles.imgContainer}>
-                                        <Image src={require('./assets/' + el.src + '.svg')}
+                                        <Image src={require('../../../../assets/' + el.src + '.svg')}
                                                alt={el.name} width={315}
                                                height={340}/>
                                         <p className={styles.absolute}>{el.promotionPercentage}</p>

@@ -3,7 +3,7 @@ import ImagesContainer from "./components/imagesContainer";
 import Promotion from "./components/promotion";
 import Forum from "./components/forum";
 import Map from './components/map'
-import Layout from "../../src/components/layout/Layout";
+import Layout from "../../components/layout/Layout";
 
 
 
