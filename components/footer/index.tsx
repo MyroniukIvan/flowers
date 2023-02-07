@@ -7,7 +7,7 @@ import visaElectron from '../../assets/visaElectron.svg'
 import maestro from '../../assets/maestro.svg'
 import masterCard from '../../assets/mastercard.svg'
 import privatBank from '../../assets/privat.svg'
-import liqPay from '../../assets/liqPay.svg'
+import liqPay from '../../assets/liqpay.svg'
 
 const Index = () => {
     return (
