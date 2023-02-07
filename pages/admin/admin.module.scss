@@ -3,4 +3,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  input,select,option{
+    display: flex;
+    width: 400px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+    background: none;
+  }
+  label{
+    margin-top: 20px;
+  }
+}
+.addProduct{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
