@@ -34,3 +34,18 @@
     padding-right: 254px;
   }
 }
+
+@media screen and (max-width: 320px) {
+
+   .headerMain {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     .p {
+       display: none;
+     }
+     .span {
+       display: none;
+     }
+   }
+}

@@ -15,7 +15,9 @@ const Index = () => {
             <div className={styles.length}>
                 <div className={styles.wrapper}>
                     <div className={styles.upper}>
-                        <div><Image style={{color: "white"}} className={styles.logo} src={logo} alt={'logo'}/></div>
+                        <div>
+                            <Image style={{color: "white"}} className={styles.logo} src={logo} alt={'logo'}/>
+                        </div>
                         <div className={styles.upperFlex}>
                             <div className={styles.upperFlexColumn}>
                                 <a href={''}>ИНФОРМАЦИЯ</a>

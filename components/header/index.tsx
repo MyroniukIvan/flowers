@@ -52,28 +52,28 @@ const Index = () => {
         <div className={styles.headerMain}>
             <div className={styles.headerMainFlexbox}>
                 <div className={styles.secondaryFlexbox}>
-                    <p>Валюта</p>
+                    <p className={styles.p}>Валюта</p>
                     <span>Uah</span>
                 </div>
                 <div className={styles.secondaryFlexbox}>
-                    <p>Язык</p>
+                    <p className={styles.p}>Язык</p>
                     <span>RU</span>
                 </div>
                 <div className={styles.secondaryFlexbox}>
-                    <p>Город</p>
-                    <span>Киев</span>
+                    <p className={styles.p}>Город</p>
+                    <span className={styles.span}>Киев</span>
                 </div>
                 <div className={styles.secondaryFlexbox}>
                     <span><Image src={heart} alt={'likes img'}/></span>
-                    <p>Закладки</p>
+                    <p className={styles.p}>Закладки</p>
                 </div>
                 <div className={styles.secondaryFlexbox}>
                     <span><Image src={truck} alt={'likes img'}/></span>
-                    <p>Доставка и оплата</p>
+                    <p className={styles.p}>Доставка и оплата</p>
                 </div>
                 <div className={styles.secondaryFlexbox}>
                     <span><Image src={phone} alt={'likes img'}/></span>
-                    <p>Контакты</p>
+                    <p className={styles.p}>Контакты</p>
                 </div>
             </div>
             <div className={styles.headerMainRegistration}>

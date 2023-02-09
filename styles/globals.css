@@ -1,8 +1,19 @@
 :root {
     --max-width: 1920px;
-    --font-mono: Museo Sans Cyrl
+    --font-mono: Museo Sans Cyrl;
+    --width-mobile: 320px;
+    --width-tablet: 481px;
+    --width-laptop: 769px;
+    --width-desktop: 1025px;
+    --width-desktop-xl: 1025px;
 }
 
+
+/*//export const MIN_WIDTH_MOBILE = 320;*/
+/*    export const MIN_WIDTH_TABLET = 481;*/
+/*    export const MIN_WIDTH_LAPTOP = 769;*/
+/*    export const MIN_WIDTH_DESKTOP = 1025;*/
+/*    export const MIN_WIDTH_DESKTOP_XL = 1201;*/
 
 * {
     scroll-behavior: auto;
@@ -39,6 +50,7 @@ input {
     height: 68px;
     border: 1px solid #E0E0E0;
 }
+
 .--btn-success {
     margin-top: 20px;
     color: #fff;
@@ -52,6 +64,12 @@ input {
 @media (prefers-color-scheme: dark) {
     html {
         background: #5a5a5a;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html {
+        width: var(--width-mobile);
     }
 }
 

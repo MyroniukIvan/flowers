@@ -66,3 +66,19 @@
   justify-content: center;
   max-width: 1416px;
 }
+
+@media screen and (max-width: 320px) {
+  .footer {
+    width: var(--width-mobile);
+    height: 100%;
+  }
+  .lowerFlex {
+    width: var(--width-mobile);
+    display: flex;
+    flex-direction: column;
+  }
+  .length {
+    width: var(--width-mobile);
+
+  }
+}
