@@ -26,7 +26,7 @@ const ViewProducts = () => {
     console.log(data)
     return (
         <div>
-            <DataTable rows={data}/>
+            <DataTable/>
         </div>
     );
 }

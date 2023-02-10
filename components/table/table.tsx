@@ -4,6 +4,7 @@ import styles from './table.module.scss'
 import {deleteDoc, doc} from "firebase/firestore";
 import {db} from "../../firebase/config";
 import {toast} from "react-toastify";
+import useFetch from "../../hooks/useFetch";
 
 const columns: GridColDef[] = [
     {field: 'imageURL', headerName: 'imageURL', width: 200, sortable: false, filterable: false, renderCell: (el) => <img src={el.value} alt={''} className={styles.img} />},
@@ -31,13 +32,15 @@ export async function deleteItem() {
     }
 }
 
-export default function DataTable({rows}: { rows: any }) {
+export default function DataTable() {
+    const {data} = useFetch('flowers', 'name')
+
     return (
         <div className={styles.table}>
             <DataGrid
                 autoHeight={true}
                 rowHeight={180}
-                rows={rows}
+                rows={data}
                 columns={columns}
                 pageSize={5}
                 rowsPerPageOptions={[5]}
