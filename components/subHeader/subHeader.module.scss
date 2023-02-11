@@ -72,3 +72,24 @@
   padding-top: 27px;
   gap: 26px;
 }
+
+@media screen and (max-width: 1050px) {
+ .secondaryFlexBox{
+   display: none;
+ }
+  .innerFlexbox{
+    flex-direction: column;
+  }
+  .input {
+    width: 100%;
+  }
+  .inputSecond {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .outerFlexbox{
+    display: none;
+  }
+}

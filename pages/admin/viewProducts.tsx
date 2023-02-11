@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import React, {useEffect, useState} from "react";
 
 import DataTable from "./components/table/table";
+import Layout from "../../components/layout/Layout";
 
 const ViewProducts = () => {
     const {data} = useFetch('flowers', 'name')
@@ -16,9 +17,12 @@ const ViewProducts = () => {
     }, [dispatch, data])
     console.log(data)
     return (
-        <div>
-            <DataTable rows={data}/>
-        </div>
+        <Layout criteria={false}>
+            <div>
+                <DataTable rows={data}/>
+            </div>
+        </Layout>
+
     );
 }
 
