@@ -1,0 +1,19 @@
+.discountImage{
+  position: relative;
+  &__desc{
+    position: absolute;
+    top: 44px;
+    left: 270px;
+    width: 412px;
+    height: 110px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 50px;
+    color: #333333;
+    span{
+      color: white;
+    }
+  }
+}
+.image__banner{
+}
