@@ -12,11 +12,11 @@ const Index = () => {
         <Layout criteria={true}>
             <div className="container">
                 <ImagesContainer/>
-                {/*<Promotion/>*/}
-                {/*<Promotion/>*/}
-                {/*<Promotion/>*/}
-                {/*<Forum/>*/}
-                {/*<Map/>*/}
+                <Promotion/>
+                <Promotion/>
+                <Promotion/>
+                <Forum/>
+                <Map/>
             </div>
 
         </Layout>

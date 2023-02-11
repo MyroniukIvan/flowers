@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './header.module.scss'
 import Image from "next/image";
 
@@ -18,9 +18,9 @@ import {
 } from "../../redux/slice/authSlice";
 import ShowOnLogin from "../authLink";
 import {ShowOnLogout} from "../authLink";
+import {MdOutlineAdminPanelSettings} from "react-icons/md";
 
 const Index = () => {
-
     const navigate = useRouter()
 
     const logoutUser = () => {
@@ -85,7 +85,9 @@ const Index = () => {
                 </ShowOnLogout>
 
                 <ShowOnLogin>
-                    <Link href='/login' onClick={logoutUser}>Выход</Link>
+                    <div>
+                        <Link href='/login' onClick={logoutUser}>Выход</Link>
+                    </div>
                 </ShowOnLogin>
 
             </div>
