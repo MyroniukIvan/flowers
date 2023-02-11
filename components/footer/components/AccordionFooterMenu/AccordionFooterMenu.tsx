@@ -8,10 +8,23 @@ import Info from "../Info";
 import Support from "../Support";
 import Personal from "../Personal";
 import Additionally from "../Additionally";
+import {createTheme, ThemeProvider} from "@mui/material";
 
+const theme = createTheme({
+    palette: {
+        mode: 'dark',
+        primary: {
+            main: '#3f51b5',
+        },
+        secondary: {
+            main: '#f50057',
+        },
+    },
+})
 
 export default function AccordionFooterMenu() {
     return (
+        <ThemeProvider theme={theme}>
             <div>
                 <Accordion >
                     <AccordionSummary
@@ -62,5 +75,7 @@ export default function AccordionFooterMenu() {
                     </AccordionDetails>
                 </Accordion>
             </div>
+        </ThemeProvider>
+
     );
 }
