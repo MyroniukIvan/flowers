@@ -34,6 +34,7 @@ const Index = () => {
                                     <Image className={styles.img} src={require('../../../../assets/' + el.src + '.svg')}
                                            alt={el.name}/>
                                     <p className={styles.absolute}>{el.promotionPercentage}</p>
+                                    <p className={styles.absolute__secondary}>TOP</p>
                                 </div>
 
 

@@ -9,7 +9,9 @@
   object-fit: contain;
   height: 340px;
 }
-
+.absolute__secondary {
+  display: none;
+}
 .child {
   margin: 21px;
   display: flex;
@@ -123,25 +125,63 @@
 }
 
 @media screen and (max-width: 320px) {
+
   .container {
+    .header {
+      display: flex;
+      justify-content: center;
+      font-size: 24px;
+      line-height: 18px;
+    }
+    .buttons {
+      display: none;
+    }
+    .absolute {
+      font-size: 10px;
+      line-height: 18px;
+      padding: 8px 5px 8px 5px;
+      border-radius: 100%;
+      border: 1px dashed #E72222;
+      position: absolute;
+      top: 4px;
+      left: 8px;
+    }
     max-width: var(--width-mobile);
     .img {
-      height: 124px;
-      width: 112px;
-    }
-    .parent {
+      height: 135px;
       width: 138px;
-      margin: 0 auto;
-    }
-    .child {
 
     }
+    .parent {
+      display: grid;
+      justify-content: flex-start;
+      grid-template-columns: 2fr 2fr 2fr 2fr;
+      width: 138px;
+    }
+    .child {
+      margin: 5px;
+      height: 276px;
+      display: block;
+      max-width: 138px;
+      width: 100%;
+    }
     .buttons__secondary {
-      justify-content: space-between;
+      justify-content: center;
       text-align: center;
       align-items: center;
+      gap: 12px;
       display: flex;
+      .link {
+        margin-bottom: 18px;
+        height: 18px;
+        text-decoration: none;
+        border-bottom: #5a5a5a 1px solid;
+        font-size: 10px;
+        font-weight: 400;
+      }
       &_cart {
+        width: 35px;
+        height: 35px;
         display: block;
       }
     }
@@ -151,7 +191,45 @@
       }
     }
     .imgContainer {
+      max-width: 138px;
       background: none;
+      .absolute__secondary {
+        font-size: 10px;
+        line-height: 18px;
+        color: #956D84;
+        padding: 9px 9px;
+        border-radius: 100%;
+        background: rgba(157, 117, 140, 0.39);
+        display: block;
+        position: absolute;
+        bottom: 16px;
+        right: 3.6px;
+      }
+    }
+    .innerFlex {
+      text-align: center;
+      padding: 0;
+      flex-direction: column;
+      .name {
+        padding: 7px 5px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 21px;
+      }
+      .text {
+        text-align: center;
+        font-size: 12px;
+        line-height: 18px;
+      }
+      .textBlock {
+        padding: 0;
+        span {
+          display: flex;
+          justify-content: center;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
     }
   }
 }
