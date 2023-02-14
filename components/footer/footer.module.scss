@@ -86,7 +86,6 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  max-width: 1416px;
 }
 
 @media screen and (max-width: 1240px) {
@@ -95,6 +94,8 @@
       flex-direction: column;
       align-items: center;
       &_wrapper{
+        margin: 0 auto;
+        padding-top: 20px;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         &_info{
@@ -168,6 +169,7 @@
   .footer {
     width: var(--width-mobile);
     height: 100%;
+
   }
   .lowerFlex {
     width: var(--width-mobile);

@@ -6,7 +6,7 @@ import {forum} from "../../../../data/data";
 
 const Index = () => {
         return (
-            <div>
+            <div className={styles.container}>
                 <div>
                     <div className={styles.header}>
                         <p className={styles.h1}>Форум</p>

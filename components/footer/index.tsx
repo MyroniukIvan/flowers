@@ -27,7 +27,6 @@ const Index = () => {
                                alt={'logo'}/>
                     </div>
                     <div className={styles.footer__links_wrapper}>
-
                         <div className={styles.footer__links_wrapper_info}>
                             <h2>ІНФОРМАЦІЯ</h2>
                             <Info/>

@@ -1,6 +1,7 @@
 import AdminNavbar
     from "../../pages/admin/components/adminNavbar/adminNavbar";
 import React from "react";
+import styles from './layout.module.scss';
 
 type DashboardLayoutProps = {
     children: React.ReactNode,
@@ -9,7 +10,7 @@ type DashboardLayoutProps = {
 const Layout = ({children, criteria}:DashboardLayoutProps) => {
 
     return (
-        <div>
+        <div className={styles.wrapper}>
             {criteria ? null : <AdminNavbar/>}
             {children}
         </div>

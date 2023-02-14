@@ -32,7 +32,7 @@ export default function AccordionFooterMenu() {
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                     >
-                        <Typography>ІНФОРМІЦІЯ</Typography>
+                        <Typography>ІНФОРМАЦІЯ</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Info/>

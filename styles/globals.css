@@ -3,17 +3,12 @@
     --font-mono: Museo Sans Cyrl;
     --width-mobile: 320px;
     --width-tablet: 481px;
-    --width-laptop: 769px;
+    --width-laptop: 816px;
     --width-desktop: 1025px;
     --width-desktop-xl: 1025px;
 }
 
 
-/*//export const MIN_WIDTH_MOBILE = 320;*/
-/*    export const MIN_WIDTH_TABLET = 481;*/
-/*    export const MIN_WIDTH_LAPTOP = 769;*/
-/*    export const MIN_WIDTH_DESKTOP = 1025;*/
-/*    export const MIN_WIDTH_DESKTOP_XL = 1201;*/
 
 * {
     scroll-behavior: auto;
@@ -28,12 +23,14 @@ img {
 
 html,
 body {
+
     background: url("../assets/flowersBg.svg") repeat-y;
     font-family: 'Museo Sans Cyrl', sans-serif;
     overflow-x: hidden;
 }
 
 body {
+    background-size:100% 100%;
     background: url("../assets/flowersBg.svg") repeat-y;
     color: revert;
 }
@@ -86,9 +83,4 @@ input {
     }
 }
 
-@media screen and (max-width: 320px) {
-    html {
-        width: var(--width-mobile);
-    }
-}
 

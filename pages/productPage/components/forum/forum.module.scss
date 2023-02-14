@@ -63,3 +63,19 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    .forumContainerWrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      justify-content: center;
+    }
+    .forumContainer:last-child {
+      margin-top: 40px;
+    }
+  }
+
+}

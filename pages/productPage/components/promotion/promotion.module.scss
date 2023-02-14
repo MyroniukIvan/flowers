@@ -5,12 +5,16 @@
   flex-wrap: wrap;
 }
 
+.img {
+  object-fit: contain;
+  height: 340px;
+}
+
 .child {
   margin: 21px;
   display: flex;
   justify-content: center;
   border: 1px solid #956D84;
-  flex: 1 1 21%; /* explanation below */
   background-color: white;
 
   &:hover {
@@ -60,6 +64,7 @@
 
   .textBlock {
     padding-bottom: 32px;
+
     .text {
       align-items: center;
       text-decoration-line: line-through;
@@ -68,6 +73,7 @@
     }
   }
 }
+
 .header {
   font-weight: 700;
   font-size: 48px;
@@ -79,12 +85,15 @@
   padding-right: 20px;
   padding-top: 115px;
 }
+
 .buttons {
   display: flex;
   justify-content: space-between;
   gap: 27px;
+  &__secondary_cart {
+    display: none;
+  }
   button {
-
     outline: none;
     border: none;
     background: white;
@@ -95,7 +104,8 @@
   display: flex;
   justify-content: center;
 }
-.link{
+
+.link {
   text-align: center;
   text-decoration-line: underline;
   font-weight: 400;
@@ -104,4 +114,44 @@
   padding-top: 16px;
   padding-bottom: 17px;
   color: #828282;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: var(--width-desktop);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    max-width: var(--width-mobile);
+    .img {
+      height: 124px;
+      width: 112px;
+    }
+    .parent {
+      width: 138px;
+      margin: 0 auto;
+    }
+    .child {
+
+    }
+    .buttons__secondary {
+      justify-content: space-between;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      &_cart {
+        display: block;
+      }
+    }
+    .center {
+      button {
+        display: none;
+      }
+    }
+    .imgContainer {
+      background: none;
+    }
+  }
 }

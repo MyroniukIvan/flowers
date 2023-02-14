@@ -13,7 +13,7 @@ import mail from '../../../../assets/mail.svg'
 
 const Map = () => {
     return (
-        <div>
+        <div className={styles.container}>
             <div className={styles.map}>
                 <div className={styles.onMapCard}>
                     <div className={styles.onMapCardFlex}>
