@@ -22,6 +22,7 @@ const theme = createTheme({
     },
 })
 
+
 export default function AccordionFooterMenu() {
     return (
         <ThemeProvider theme={theme}>

@@ -25,7 +25,7 @@ html,
 body {
 
     background: url("../assets/flowersBg.svg") repeat-y;
-    font-family: 'Museo Sans Cyrl', sans-serif;
+    font-family: 'Museo Sans Cyrl';
     overflow-x: hidden;
 }
 

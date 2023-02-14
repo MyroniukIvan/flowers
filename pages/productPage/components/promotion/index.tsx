@@ -9,7 +9,6 @@ import {promotion} from "../../../../data/data";
 import purchaseCart from '../../../../assets/purchaseCart.svg'
 
 
-//add category TOP to data + display it
 const Index = () => {
     return (<div className={styles.container}>
             <div className={styles.header}>
@@ -23,11 +22,10 @@ const Index = () => {
                     </button>
                 </div>
             </div>
-
             <div className={styles.parent}>
-                {promotion.map((el, index) => {
-                    return (<div key={index} className={styles.child}>
-
+                { promotion.map((el, index) => {
+                    return (
+                        <div key={index} className={styles.child}>
                             {/*img container*/}
                             <div>
                                 <div className={styles.imgContainer}>

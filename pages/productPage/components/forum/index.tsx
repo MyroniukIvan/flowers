@@ -19,16 +19,17 @@ const Index = () => {
                     {forum.map((el, index) => {
                         return (
                             <div key={index} className={styles.forumContainer}>
-                                <Image className={styles.forumContainerImg}
+                                <div className={styles.forumContainerImg}>
+                                <Image
                                        src={require('../../../../assets/' + `${el.src}` + '.svg')} alt={'forum image'}
-                                       width={412}
-                                       height={343}/>
+                                       />
+                                </div>
                                 <div className={styles.forumContainerBox}>
                                     <div className={styles.forumContainerHeader}>
-                                        {el.header}
+                                       <p> {el.header}</p>
                                     </div>
                                     <div className={styles.forumContainerSubheader}>
-                                        {el.subheader}
+                                       <p>{el.subheader}</p>
                                     </div>
                                 </div>
                             </div>

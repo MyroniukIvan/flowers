@@ -169,12 +169,27 @@
   .footer {
     width: var(--width-mobile);
     height: 100%;
-
+    p:first-child {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__link {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 18px;
+    }
   }
   .lowerFlex {
     width: var(--width-mobile);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 0;
+    place-items: center;
+    grid-auto-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+    a {
+      width: 80px;
+    }
   }
   .length {
     width: var(--width-mobile);
