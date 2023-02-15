@@ -8,7 +8,7 @@ const Index = () => {
     return (<div className={styles.container}>
             <div>
                 <div className={styles.header}>
-                    <p className={styles.h1}>Форум</p>
+                    <h2 className={styles.h2}>Форум</h2>
                     <button className={styles.p}>
                         <Image src={btnImg} alt={'btn'}/>
                     </button>

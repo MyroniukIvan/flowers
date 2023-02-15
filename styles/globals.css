@@ -7,6 +7,7 @@
     --width-desktop: 1025px;
     --width-desktop-xl: 1025px;
 }
+
 @font-face {
     font-family: 'Museo Sans Cyrl';
     src: url('../assets/MuseoSansCyrl/MuseoSansCyrl300.ttf');
@@ -17,6 +18,12 @@
     font-family: 'Museo Sans Cyrl';
     src: url('../assets/MuseoSansCyrl/MuseoSansCyrl700.ttf');
     font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('../assets/MuseoSansCyrl/MuseoSansCyrl900.ttf');
+    font-weight: 900;
     font-style: normal;
 }
 
@@ -40,8 +47,6 @@ body {
 }
 
 body {
-    background-size:100% 100%;
-    background: url("../assets/flowersBg.svg") repeat-y;
     color: revert;
 }
 
@@ -89,7 +94,7 @@ input {
 
 @media (prefers-color-scheme: dark) {
     html {
-        background: #5a5a5a;
+        background: #a8a8a8;
     }
 }
 
