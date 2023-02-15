@@ -16,4 +16,17 @@
   }
 }
 .image__banner{
+  position: relative;
+  &_desc{
+    position: absolute;
+    top: 40px;
+    left: 34px;
+    width: 284px;
+    height: 70px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 50px;
+    color: #333333;
+
+  }
 }
