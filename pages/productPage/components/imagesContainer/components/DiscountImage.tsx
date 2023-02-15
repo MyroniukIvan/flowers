@@ -5,11 +5,13 @@ import rose from '../../../../../assets/discountRose.png'
 
 const DiscountImage = () => {
     return (
-        <div className={styles.discountImage}>
-            <Image src={rose} alt={'rose'}/>
-            <p className={styles.discountImage__desc}>Скидки <span>-6%</span> на все
-                букеты <span>по предзаказу</span> на 8
-                марта</p>
+        <div  className={styles.discountImage}>
+            <Image src={rose}
+                   alt={'rose'}
+                  />
+            <p className={styles.discountImage__desc}>Знижки <span>-6%</span> на всі
+                букети <span>по передзамовленню</span> на 8
+                березня</p>
         </div>
     );
 }

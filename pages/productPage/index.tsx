@@ -7,11 +7,13 @@ import Layout from "../../components/layout/Layout";
 
 
 
+
 const Index = () => {
     return (
         <Layout criteria={true}>
             <div className="container">
                 <ImagesContainer/>
+
                 <Promotion/>
                 <Promotion/>
                 <Promotion/>

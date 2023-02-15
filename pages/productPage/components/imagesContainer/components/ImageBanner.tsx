@@ -5,7 +5,7 @@ import React from "react";
 const ImageBanner = ({title,image}) => {
     return (
         <div className={styles.image__banner}>
-            <Image src={image} alt={''}/>
+            <Image src={image}  alt={''}/>
             <p className={styles.image__banner_desc}>{title}</p>
         </div>
     );

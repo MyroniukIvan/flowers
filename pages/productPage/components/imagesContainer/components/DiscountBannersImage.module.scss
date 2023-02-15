@@ -18,7 +18,18 @@
   }
 }
 .image__banner{
-
+  position: relative;
+  &_desc{
+    position: absolute;
+    top: 40px;
+    left: 34px;
+    width: 284px;
+    height: 70px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 50px;
+    color: #333333;
+  }
 }
 
 @media screen and (max-width: 320px){
@@ -31,7 +42,7 @@
     line-height: 25px;
   }
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width: 375px) {
   .discountImage__desc {
     left: 39px;
     top: 21px;
