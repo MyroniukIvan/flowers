@@ -1,15 +1,20 @@
 $aspect-ratio: 4/3;
+.slider__wrapper {
+  display: none;
+}
 
-.image__wrapper{
+.image__wrapper {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(4, 1fr);
   gap: 0px;
   height: 100%;
-  .slider__wrapper{
+
+  .slider__wrapper {
     display: none;
   }
-  .element1{
+
+  .element1 {
     grid-row-start: 1;
     grid-column-start: 1;
 
@@ -117,6 +122,10 @@ $aspect-ratio: 4/3;
     max-width: var(--width-laptop);
 
     .image__wrapper {
+      .slider__wrapper {
+        display: none;
+      }
+
       display: flex;
       flex-wrap: wrap;
       object-fit: cover;
@@ -131,46 +140,40 @@ $aspect-ratio: 4/3;
   .image__wrapper {
     display: none;
   }
-  .slider__wrapper{
+  .slider__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-@media screen and (max-width: 320px) {
+    @media screen and (max-width: 320px) {
+      .container {
+        max-width: var(--width-mobile);
+
+        .image__wrapper {
+          img {
+            height: 275px;
+            width: 290px;
+          }
+
+          display: flex;
+          flex-wrap: nowrap;
+          flex-direction: row;
+          object-fit: cover;
+          gap: 10px;
+          align-items: center;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
   .container {
     max-width: var(--width-mobile);
 
     .image__wrapper {
-      img {
-        height: 275px;
-        width: 290px;
-      }
-
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      object-fit: cover;
-      gap: 10px;
-      align-items: center;
-      justify-content: flex-start;
-    }
-  }}}}
-
-@media screen and (max-width: 375px) {
-  .container {
-    max-width: var(--width-tablet);
-    .image__wrapper {
-      img {
-        height: 275px;
-        width: 290px;
-      }
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      object-fit: cover;
-      gap: 10px;
-      align-items: center;
-      justify-content: flex-start;
+      display: none;
     }
   }
 }

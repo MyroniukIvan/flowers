@@ -8,11 +8,7 @@ import candy from '../../../../assets/candy.png'
 import box from '../../../../assets/box.png'
 import Slider from '../sliderBanner/slider'
 
-
-import yellow from '../../../../assets/bgImgYellow.svg'
-
 const Index = () => {
-
     return (
         <div className={styles.container}>
             <div className={styles.image__wrapper}>
@@ -32,14 +28,10 @@ const Index = () => {
                     <ImageBanner image={box} title={'Квіти в коробці'}/>
                 </div>
             </div>
-
             <div className={styles.slider__wrapper}>
-<Slider/>
+                <Slider/>
             </div>
         </div>
-
-
-
     );
-};
+}
 export default Index;
