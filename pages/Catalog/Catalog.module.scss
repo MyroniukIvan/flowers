@@ -1,4 +1,24 @@
 .container {
+  position: relative;
+  .navbar {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    left: 100px;
+    top: 5px;
+    .disabled {
+      pointer-events: none;
+      color: #969696;
+    }
+    p {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 18px;
+      align-items: center;
+      text-decoration-line: underline;
+      color: #4b4b4b;
+    }
+  }
   .header {
     display: flex;
     justify-content: center;

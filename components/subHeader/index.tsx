@@ -32,7 +32,7 @@ const Index = () => {
                     </div>
 
                     {<div className={styles.secondaryFlexBox}>
-                        <a href={''}>Каталог товаров</a>
+                        <Link href={'./Catalog'}>Каталог товаров</Link>
                         <a href={''}>Форум</a>
                         <a href={''}>Отзывы</a>
                         <a href={''}>Акции</a>
