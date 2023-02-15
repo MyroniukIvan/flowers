@@ -13,10 +13,10 @@ import Link from "next/link";
 
 const Index = () => {
     return (
-        <div className="container">
+        <div className={styles.container}>
             <div className={styles.mainFlexbox}>
                 <Link href={'/'}>
-                    <Image src={logo} alt={'logo'}/>
+                    <Image className={styles.logo} src={logo} alt={'logo'}/>
                 </Link>
                 <div className={styles.outerFlexbox}>
 
@@ -32,7 +32,7 @@ const Index = () => {
                     </div>
 
                     {<div className={styles.secondaryFlexBox}>
-                        <a href={''}>Каталог товаров</a>
+                        <Link href={'./Catalog'}>Каталог товаров</Link>
                         <a href={''}>Форум</a>
                         <a href={''}>Отзывы</a>
                         <a href={''}>Акции</a>
@@ -47,12 +47,12 @@ const Index = () => {
                         <Image src={facebook} alt={'facebook'}/>
                     </div>
                     <div>
-                        <p>+38 (067) 829 30 30</p>
+                        <p className={styles.removable}>+38 (067) 829 30 30</p>
                     </div>
                     <div className={styles.iconsSecondary}>
-                        <Image style={{height: '33px', width: '29px'}} src={heart} alt={'heart'}/>
-                        <Image src={cart} alt={'cart'}/>
-                        <p>₴ 1 520</p>
+                        <Image className={styles.heart} style={{height: '33px', width: '29px'}} src={heart} alt={'heart'}/>
+                        <Image className={styles.cart} src={cart} alt={'cart'}/>
+                        <p className={styles.removable}>₴ 1 520</p>
                     </div>
                 </div>
             </div>

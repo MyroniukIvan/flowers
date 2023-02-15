@@ -4,19 +4,15 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Info from "../Info";
-import Support from "../Support";
-import Personal from "../Personal";
-import Additionally from "../Additionally";
 import {createTheme, ThemeProvider} from "@mui/material";
+import {accordionDetails} from '../../../../data/data'
+import styles from './accordion.module.scss'
 
 const theme = createTheme({
     palette: {
-        mode: 'dark',
-        primary: {
+        mode: 'light', primary: {
             main: '#3f51b5',
-        },
-        secondary: {
+        }, secondary: {
             main: '#f50057',
         },
     },
@@ -24,43 +20,48 @@ const theme = createTheme({
 
 
 export default function AccordionFooterMenu() {
-    return (
-        <ThemeProvider theme={theme}>
-            <div>
-                <Accordion >
+    return (<ThemeProvider theme={theme}>
+            <div className={styles.accordion}>
+                <Accordion defaultExpanded={true}>
                     <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
+                        expandIcon={<ExpandMoreIcon/>}
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                     >
-                        <Typography>ІНФОРМАЦІЯ</Typography>
+                        <Typography>Букеты</Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
-                        <Info/>
+                    <AccordionDetails >
+                        {accordionDetails.map(el => {
+                            return <div key={el.id}>{el.name}</div>
+                        })}
                     </AccordionDetails>
                 </Accordion>
                 <Accordion>
                     <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
+                        expandIcon={<ExpandMoreIcon/>}
                         aria-controls="panel2a-content"
                         id="panel2a-header"
                     >
-                        <Typography>СЛУЖБА ПІДТРИМКИ</Typography>
+                        <Typography>Розы</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Support/>
+                        {accordionDetails.map(el => {
+                            return <div key={el.id}>{el.name}</div>
+                        })}
                     </AccordionDetails>
                 </Accordion>
                 <Accordion>
                     <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
+                        expandIcon={<ExpandMoreIcon/>}
                         aria-controls="panel3a-content"
                         id="panel3a-header"
                     >
-                        <Typography>ОСОБИСТИЙ КАБІНЕТ</Typography>
+                        <Typography>Цветы в коробке</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Personal/>
+                        {accordionDetails.map(el => {
+                            return <div key={el.id}>{el.name}</div>
+                        })}
                     </AccordionDetails>
                 </Accordion>
                 <Accordion>
@@ -69,14 +70,14 @@ export default function AccordionFooterMenu() {
                         aria-controls="panel4a-content"
                         id="panel4a-header"
                     >
-                        <Typography> ДОДАТКОВО</Typography>
+                        <Typography>Композиции</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Additionally/>
+                        {accordionDetails.map(el => {
+                            return <button key={el.id}>{el.name}</button>
+                        })}
                     </AccordionDetails>
                 </Accordion>
             </div>
-        </ThemeProvider>
-
-    );
+        </ThemeProvider>)
 }

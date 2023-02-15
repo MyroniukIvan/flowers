@@ -1,5 +1,7 @@
 .discountImage{
+  height: auto;
   position: relative;
+  object-fit: fill;
   &__desc{
     position: absolute;
     top: 44px;
@@ -27,6 +29,26 @@
     font-size: 36px;
     line-height: 50px;
     color: #333333;
+  }
+}
 
+@media screen and (max-width: 320px){
+  .discountImage__desc {
+    left: 39px;
+    top: 21px;
+    width: 228px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .discountImage__desc {
+    left: 39px;
+    top: 21px;
+    width: 228px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
   }
 }

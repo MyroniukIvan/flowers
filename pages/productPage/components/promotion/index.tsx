@@ -6,16 +6,13 @@ import vRight from '../../../../assets/VectorRight.svg'
 import Button from "../../../../components/button/button";
 import Link from "next/link";
 import {promotion} from "../../../../data/data";
+import purchaseCart from '../../../../assets/purchaseCart.svg'
 
 
-//add category TOP to data + display it
 const Index = () => {
-    return (
-        <>
+    return (<div className={styles.container}>
             <div className={styles.header}>
-                <div>
-                    <h1>Акции</h1>
-                </div>
+                <h2>Акции</h2>
                 <div className={styles.buttons}>
                     <button>
                         <Image src={vLeft} alt={'vector left'}/>
@@ -25,19 +22,17 @@ const Index = () => {
                     </button>
                 </div>
             </div>
-
             <div className={styles.parent}>
-                {promotion.map((el, index) => {
+                { promotion.map((el, index) => {
                     return (
                         <div key={index} className={styles.child}>
-
                             {/*img container*/}
                             <div>
                                 <div className={styles.imgContainer}>
-                                    <Image src={require('../../../../assets/' + el.src + '.svg')}
-                                           alt={el.name} width={315}
-                                           height={340}/>
+                                    <Image className={styles.img} src={require('../../../../assets/' + el.src + '.svg')}
+                                           alt={el.name}/>
                                     <p className={styles.absolute}>{el.promotionPercentage}</p>
+                                    <p className={styles.absolute__secondary}>TOP</p>
                                 </div>
 
 
@@ -55,21 +50,25 @@ const Index = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={styles.center}>
-                                    <Button label={'Заказать'}/>
-                                </div>
-                                <div className={styles.center}>
-                                    <Link href={''} className={styles.link}>
-                                        Быстрый заказ
-                                    </Link>
+
+                                <div className={styles.buttons__secondary}>
+                                    <div className={styles.center}>
+                                        <Button label={'Заказать'}/>
+                                    </div>
+                                    <div className={styles.center}>
+                                        <Link href={''} className={styles.link}>
+                                            Быстрый заказ
+                                        </Link>
+                                    </div>
+                                    <div className={styles.buttons__secondary_cart}>
+                                        <Image src={purchaseCart} alt={'cart'}/>
+                                    </div>
                                 </div>
                                 {/*    buttons */}
                             </div>
-                        </div>
-                    )
+                        </div>)
                 })}
             </div>
-        </>
-    );
+        </div>);
 };
 export default Index;

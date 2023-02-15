@@ -5,39 +5,33 @@ import btnImg from '../../../../assets/allnewsBtn.svg'
 import {forum} from "../../../../data/data";
 
 const Index = () => {
-        return (
+    return (<div className={styles.container}>
             <div>
-                <div>
-                    <div className={styles.header}>
-                        <p className={styles.h1}>Форум</p>
-                        <button className={styles.p}>
-                            <Image src={btnImg} alt={'btn'}/>
-                        </button>
-                    </div>
-                </div>
-                <div className={styles.forumContainerWrapper}>
-                    {forum.map((el, index) => {
-                        return (
-                            <div key={index} className={styles.forumContainer}>
-                                <Image className={styles.forumContainerImg}
-                                       src={require('../../../../assets/' + `${el.src}` + '.svg')} alt={'forum image'}
-                                       width={412}
-                                       height={343}/>
-                                <div className={styles.forumContainerBox}>
-                                    <div className={styles.forumContainerHeader}>
-                                        {el.header}
-                                    </div>
-                                    <div className={styles.forumContainerSubheader}>
-                                        {el.subheader}
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    })}
+                <div className={styles.header}>
+                    <h2 className={styles.h2}>Форум</h2>
+                    <button className={styles.p}>
+                        <Image src={btnImg} alt={'btn'}/>
+                    </button>
                 </div>
             </div>
-        );
-    }
-;
+            <div className={styles.forumContainerWrapper}>
+                {forum.map((el, index) => {
+                    return (<div key={index} className={styles.forumContainer}>
+                            <div className={styles.forumContainerImg}>
+                                <Image src={require('../../../../assets/' + `${el.src}` + '.svg')} alt={'forum image'}/>
+                            </div>
+                            <div className={styles.forumContainerBox}>
+                                <div className={styles.forumContainerHeader}>
+                                    <p> {el.header}</p>
+                                </div>
+                                <div className={styles.forumContainerSubheader}>
+                                    <p>{el.subheader}</p>
+                                </div>
+                            </div>
+                        </div>)
+                })}
+            </div>
+        </div>);
+};
 
 export default Index;

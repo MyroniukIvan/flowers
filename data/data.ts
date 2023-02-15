@@ -1,83 +1,128 @@
-export const forum = [
-    {
-        src: 'girlwithflower',
-        id: 1,
-        header: 'Какие цветы под запретом: что нельзя дарить',
-        subheader: 'Осведомленности в сфере новых трендов цветочного дизайна и знакомства с работами...'
-    },
-    {
-        src: 'roses',
-        id: 2,
-        header: 'Какие цветы под запретом: что нельзя дарить',
-        subheader: 'Осведомленности в сфере новых трендов цветочного дизайна и знакомства с работами...'
-    },
-    {
-        src: 'bucketofflowers',
-        id: 3,
-        header: 'Какие цветы под запретом: что нельзя дарить',
-        subheader: 'Осведомленности в сфере новых трендов цветочного дизайна и знакомства с работами...'
-    },
-]
+export const forum = [{
+    src: 'girlwithflower',
+    id: 1,
+    header: 'Какие цветы под запретом: что нельзя дарить',
+    subheader: 'Осведомленности в сфере новых трендов цветочного дизайна и знакомства с работами...'
+}, {
+    src: 'roses',
+    id: 2,
+    header: 'Какие цветы под запретом: что нельзя дарить',
+    subheader: 'Осведомленности в сфере новых трендов цветочного дизайна и знакомства с работами...'
+}, {
+    src: 'bucketofflowers',
+    id: 3,
+    header: 'Какие цветы под запретом: что нельзя дарить',
+    subheader: 'Осведомленности в сфере новых трендов цветочного дизайна и знакомства с работами...'
+},]
 
-export const promotion = [
+export const promotion = [{
+    id: 1,
+    name: '101 красная роза',
+    price: '1680 грн',
+    promotion: '2800 грн',
+    promotionPercentage: '-10%',
+    src: `roseflower`,
+
+}, {
+    id: 2,
+    name: '25 розовых пионовидных роз',
+    price: '2280 грн',
+    promotion: '2800 грн',
+    promotionPercentage: '-19%',
+    src: `pinkflower`,
+
+}, {
+    id: 3,
+    name: 'Влюбленность',
+    price: '1270 грн',
+    promotion: '2800 грн',
+    promotionPercentage: '-19%',
+    src: `flowerWithTreats`,
+}, {
+    id: 4,
+    name: 'Корзина все для тебя',
+    price: '2020 грн',
+    promotion: '2800 грн',
+    promotionPercentage: '-19%',
+    src: `purpleFlower`,
+}, {
+    id: 5,
+    name: '101 красная роза',
+    price: '2280 грн',
+    promotion: '2800 грн',
+    promotionPercentage: '-19%',
+    src: `roseflower`,
+}, {
+    id: 6,
+    name: '25 розовых пионовидных роз',
+    price: '2280 грн',
+    promotion: '2800 грн',
+    promotionPercentage: '-19%',
+    src: `pinkflower`,
+
+}, {
+    id: 7,
+    name: 'Влюбленность',
+    price: '1270 грн',
+    promotion: '2800 грн',
+    promotionPercentage: '-19%',
+    src: `flowerWithTreats`,
+}, {
+    id: 8,
+    name: 'Корзина все для тебя',
+    price: '2020 грн',
+    promotion: '2800 грн',
+    promotionPercentage: '-19%',
+    src: `purpleFlower`,
+},]
+
+export const currency = [{
+    id: 1, type: 'UAH'
+}, {
+    id: 2, type: '$'
+}, {
+    id: 3, type: 'canadian $'
+}, {
+    id: 4, type: 'EURO'
+},]
+
+export const accordionDetails = [
     {
-        id: 1,
-        name: '101 красная роза',
-        price: '1680 грн',
-        promotion: '2800 грн',
-        promotionPercentage: '-10%',
-        src: `roseflower`,
-
+        name: "Букеты из роз", id: 1,
     }, {
-        id: 2,
-        name: '25 розовых пионовидных роз',
-        price: '2280 грн',
-        promotion: '2800 грн',
-        promotionPercentage: '-19%',
-        src: `pinkflower`,
-
+        name: "Букеты из хризантем", id: 2,
     }, {
-        id: 3,
-        name: 'Влюбленность',
-        price: '1270 грн',
-        promotion: '2800 грн',
-        promotionPercentage: '-19%',
-        src: `flowerWithTreats`,
+        name: "Букеты из альтромерии", id: 3,
     }, {
-        id: 4,
-        name: 'Корзина все для тебя',
-        price: '2020 грн',
-        promotion: '2800 грн',
-        promotionPercentage: '-19%',
-        src: `purpleFlower`,
+        name: "Букеты из гербер", id: 4,
     }, {
-        id: 5,
-        name: '101 красная роза',
-        price: '2280 грн',
-        promotion: '2800 грн',
-        promotionPercentage: '-19%',
-        src: `roseflower`,
+        name: "Букеты из ирисов", id: 5,
     }, {
-        id: 6,
-        name: '25 розовых пионовидных роз',
-        price: '2280 грн',
-        promotion: '2800 грн',
-        promotionPercentage: '-19%',
-        src: `pinkflower`,
-
+        name: "Букеты из пионов", id: 6,
     }, {
-        id: 7,
-        name: 'Влюбленность',
-        price: '1270 грн',
-        promotion: '2800 грн',
-        promotionPercentage: '-19%',
-        src: `flowerWithTreats`,
+        name: "Букеты из эустомы", id: 7,
     }, {
-        id: 8,
-        name: 'Корзина все для тебя',
-        price: '2020 грн',
-        promotion: '2800 грн',
-        promotionPercentage: '-19%',
-        src: `purpleFlower`,
-    },
-]
+        name: "Букеты из тюльпонов", id: 8,
+    }, {
+        name: "Букеты из фрезий", id: 9,
+    }, {
+        name: "Букеты из орхидей", id: 10,
+    },{
+        name: "Букеты из гортензии", id: 10,
+    },{
+        name: "Букеты из лилий", id: 10,
+    },{
+        name: "Букеты из гвоздик", id: 10,
+    },{
+        name: "Дизайнерские букеты", id: 10,
+    },{
+        name: "Бизнес букеты", id: 10,
+    },{
+        name: "Букеты любимой", id: 10,
+    },{
+        name: "Букеты для мужчины", id: 10,
+    },{
+        name: "Весение букеты", id: 10,
+    },{
+        name: "Летние букеты", id: 10,
+    },]

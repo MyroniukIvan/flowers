@@ -1,4 +1,5 @@
 .headerMain {
+  gap: 229px;
   white-space: nowrap;
   font-size: 16px;
   color: white;
@@ -19,6 +20,9 @@
     }
   }
 
+  .line {
+    display: none;
+  }
   .secondaryFlexbox {
     justify-content: space-around;
     gap: 12px;
@@ -33,11 +37,13 @@
   }
 }
 
-@media screen and (max-width: 320px) {
-
-   .headerMain {
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: var(--width-desktop);
+  }
+  .headerMain {
      display: flex;
-     justify-content: center;
+     justify-content: space-around;
      align-items: center;
      .p {
        display: none;
@@ -47,3 +53,96 @@
      }
    }
 }
+
+@media screen and (max-width: 320px) {
+    .container {
+      width: var(--width-mobile);
+    }
+   .headerMain {
+     display: flex;
+     justify-content: center;
+     gap: 0;
+     align-items: center;
+     .line {
+       display: block;
+       width: 21px;
+
+     }
+     .delivery {
+       font-weight: 300;
+       font-size: 13px;
+       line-height: 18px;
+     }
+
+     .p {
+       display: none;
+     }
+     .span {
+       display: none;
+     }
+     .headerMainFlexbox {
+       gap: 0;
+     }
+     .secondaryFlexbox {
+       .heart {
+         display: none;
+       }.phone {
+         display: none;
+       }
+     }
+   }
+  .link {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  .container {
+
+    .headerMain {
+      padding-left: 20px;
+      padding-right: 20px;
+      display: flex;
+      justify-content: space-around;
+      gap: 5px;
+
+      .line {
+        display: block;
+        width: 21px;
+      }
+
+      .delivery {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 18px;
+      }
+
+      .p {
+        display: none;
+      }
+
+      .span {
+        display: none;
+      }
+
+      .headerMainFlexbox {
+        gap: 0;
+      }
+
+      .secondaryFlexbox {
+        .heart {
+          display: none;
+        }
+
+        .phone {
+          display: none;
+        }
+      }
+    }
+
+    .link {
+      display: none;
+    }
+  }
+}
+
+

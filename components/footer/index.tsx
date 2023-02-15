@@ -12,14 +12,12 @@ import Info from "./components/Info";
 import Additionally from "./components/Additionally";
 import Personal from "./components/Personal";
 import Support from "./components/Support";
-import AccordionFooterMenu
-    from "./components/AccordionFooterMenu/AccordionFooterMenu";
+import AccordionFooterMenu from "./components/AccordionFooterMenu/AccordionFooterMenu";
 
 const Index = () => {
     return (
-
         <footer className={styles.footer}>
-            <div className="container">
+            <div className={styles.container}>
                 <div className={styles.footer__links}>
                     <div className={styles.footer__links_logo}>
                         <Image style={{color: "white"}}
@@ -27,7 +25,6 @@ const Index = () => {
                                alt={'logo'}/>
                     </div>
                     <div className={styles.footer__links_wrapper}>
-
                         <div className={styles.footer__links_wrapper_info}>
                             <h2>ІНФОРМАЦІЯ</h2>
                             <Info/>
@@ -80,9 +77,7 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-
-        </footer>
-    );
+        </footer>);
 };
 
 export default Index;

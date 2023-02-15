@@ -9,11 +9,12 @@ import box from '../../../../assets/box.png'
 import Slider from '../sliderBanner/slider'
 
 
+import yellow from '../../../../assets/bgImgYellow.svg'
 
 const Index = () => {
 
     return (
-        <div className={styles.images__container}>
+        <div className={styles.container}>
             <div className={styles.image__wrapper}>
                 <div className={styles.element1}>
                     <DiscountImage/>

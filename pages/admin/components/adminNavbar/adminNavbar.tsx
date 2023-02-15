@@ -3,7 +3,7 @@ import styles from './adminNavbar.module.scss'
 import Link from "next/link";
 const Index = () => {
     return (
-        <div>
+        <div className={styles.container}>
             <nav className={styles.navbar}>
                 <ul className={styles.navbar__list}>
                     <Link className={styles.navbar__list_item} href="/admin">Главная</Link>
