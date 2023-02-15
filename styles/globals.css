@@ -7,7 +7,18 @@
     --width-desktop: 1025px;
     --width-desktop-xl: 1025px;
 }
-
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('../assets/MuseoSansCyrl/MuseoSansCyrl300.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('../assets/MuseoSansCyrl/MuseoSansCyrl700.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
 
 
 * {
@@ -23,9 +34,8 @@ img {
 
 html,
 body {
-
     background: url("../assets/flowersBg.svg") repeat-y;
-    font-family: 'Museo Sans Cyrl';
+    font-family: 'Museo Sans Cyrl', sans-serif;
     overflow-x: hidden;
 }
 

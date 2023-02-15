@@ -56,6 +56,7 @@
   right: 5px;
   position: absolute;
 }
+
 .inputSecondBlock {
   position: relative;
 }
@@ -74,10 +75,10 @@
 }
 
 @media screen and (max-width: 1050px) {
- .secondaryFlexBox{
-   display: none;
- }
-  .innerFlexbox{
+  .secondaryFlexBox {
+    display: none;
+  }
+  .innerFlexbox {
     flex-direction: column;
   }
   .input {
@@ -89,7 +90,53 @@
 }
 
 @media screen and (max-width: 650px) {
-  .outerFlexbox{
+  .outerFlexbox {
     display: none;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .container {
+    width: var(--width-mobile);
+    .mainFlexbox {
+      gap: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 20px;
+    }
+    .outerFlexbox {
+      display: flex;
+      flex-direction: row;
+      .removable {
+        display: none;
+      }
+      input {
+        display: none;
+      }
+      .icons {
+        display: none;
+      }
+      .inputSecondIcon {
+        position: relative;
+        right: 0;
+        top: 5px;
+        height: 18.117645263671875px;
+        width: 18.117645263671875px;
+      }
+      .cart {
+        height: 23.000003814697266px;
+        width: 25.000001907348633px;
+      }
+      .logo {
+        height: 78px;
+        width: 75px;
+      }
+      .heart {
+        display: none;
+      }
+    }
+  }
+
+}
+

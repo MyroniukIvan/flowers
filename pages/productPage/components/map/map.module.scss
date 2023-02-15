@@ -10,6 +10,14 @@
   margin-top: 70px;
 }
 
+.mapItem {
+  height: 508px;
+}
+
+.mediaIcons {
+  padding-top: 32px;
+}
+
 .onMapCard {
   div:has(p) {
     padding: 13px;
@@ -44,5 +52,48 @@
   .container {
     max-width: var(--width-desktop);
   }
+}
 
+@media screen and (max-width: 320px) {
+  .container {
+    margin-bottom: 90px;
+    max-width: var(--width-mobile);
+
+    .mediaIcons {
+      margin: 0 auto;
+      padding-top: 0;
+    }
+
+    .media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .map {
+      position: relative;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .mapItem {
+      height: 250px;
+    }
+
+    .onMapCard {
+      div:has(p) {
+        padding: 5px;
+      }
+
+      height: 300px;
+      width: 299px;
+      position: absolute;
+      bottom: -10rem;
+      left: 0;
+      margin: 7px;
+    }
+  }
 }

@@ -113,5 +113,23 @@
   }
   }
 }
+@media screen and (max-width: 320px) {
+  .container {
+    max-width: var(--width-mobile);
+  .image__wrapper {
+      img{
+        height: 275px;
+        width: 290px;
+      }
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    object-fit: cover;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  }
+}
 
 

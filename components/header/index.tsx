@@ -49,9 +49,12 @@ const Index = () => {
             <div className={styles.headerMain}>
                 <div className={styles.headerMainFlexbox}>
                     <div className={styles.secondaryFlexbox}>
-                        <p className={styles.p}>Валюта</p>
-                        <span>Uah</span>
+                        <div className={styles.price}>
+                            <p className={styles.p}>Валюта</p>
+                            <span>Uah</span>
+                        </div>
                     </div>
+                    <Image className={styles.line} src={line} alt="line"/>
                     <div className={styles.secondaryFlexbox}>
                         <p className={styles.p}>Язык</p>
                         <span>RU</span>
@@ -61,24 +64,26 @@ const Index = () => {
                         <span className={styles.span}>Киев</span>
                     </div>
                     <div className={styles.secondaryFlexbox}>
-                        <span><Image src={heart} alt={'likes img'}/></span>
+                        <span><Image className={styles.heart} src={heart} alt={'likes img'}/></span>
                         <p className={styles.p}>Закладки</p>
                     </div>
+                    <Image className={styles.line} src={line} alt="line"/>
                     <div className={styles.secondaryFlexbox}>
                         <span><Image src={truck} alt={'likes img'}/></span>
-                        <p className={styles.p}>Доставка и оплата</p>
+                        <p className={styles.delivery}>Доставка и оплата</p>
                     </div>
                     <div className={styles.secondaryFlexbox}>
-                        <span><Image src={phone} alt={'likes img'}/></span>
+                        <span><Image className={styles.phone}  src={phone} alt={'likes img'}/></span>
                         <p className={styles.p}>Контакты</p>
                     </div>
                 </div>
+                <Image className={styles.line} src={line} alt="line"/>
                 <div className={styles.headerMainRegistration}>
                     <ShowOnLogout>
                         <Image src={user} alt={'user'}/>
-                        <Link href='/login'>Вход</Link>
-                        <Image style={{paddingTop: '5px'}} src={line} alt="line"/>
-                        <Link href='/auth'>Регистрация</Link>
+                        <Link className={styles.link} href='/login'>Вход</Link>
+                        <Link href='/login'><Image className={styles.line} src={line} alt="line"/></Link>
+                        <Link className={styles.link} href='/auth'>Регистрация</Link>
                     </ShowOnLogout>
 
                     <ShowOnLogin>

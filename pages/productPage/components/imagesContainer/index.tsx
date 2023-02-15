@@ -8,7 +8,8 @@ import yellow from '../../../../assets/bgImgYellow.svg'
 
 const Index = () => {
 
-    return (  <div className={styles.container}>
+    return (
+        <div className={styles.container}>
             <div className={styles.image__wrapper}>
                 <div className={styles.element1}>
                     <DiscountImage/>

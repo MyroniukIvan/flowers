@@ -71,7 +71,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       flex-grow: 1;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     .forumContainer:last-child {
@@ -91,20 +91,22 @@
 
     .forumContainer {
       height: 350px;
-      width: 350px;
+      padding: 20px;
 
       .forumContainerImg {
         img {
-
-          width: 257.05px;
+          position: relative;
+          right: 25px;
           height: 214px;
-          bottom: 50px;
+          width: 257.05px;
         }
       }
     }
 
     .forumContainerBox {
-      width: 260px;
+      width: 287px;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
 
     .p {

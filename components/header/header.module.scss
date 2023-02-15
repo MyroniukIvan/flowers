@@ -20,6 +20,9 @@
     }
   }
 
+  .line {
+    display: none;
+  }
   .secondaryFlexbox {
     justify-content: space-around;
     gap: 12px;
@@ -49,22 +52,48 @@
        display: none;
      }
    }
-
 }
 
 @media screen and (max-width: 320px) {
-
+    .container {
+      width: var(--width-mobile);
+    }
    .headerMain {
      display: flex;
      justify-content: center;
+     gap: 0;
      align-items: center;
+     .line {
+       display: block;
+       width: 21px;
+
+     }
+     .delivery {
+       font-weight: 300;
+       font-size: 13px;
+       line-height: 18px;
+     }
+
      .p {
        display: none;
      }
      .span {
        display: none;
      }
+     .headerMainFlexbox {
+       gap: 0;
+     }
+     .secondaryFlexbox {
+       .heart {
+         display: none;
+       }.phone {
+         display: none;
+       }
+     }
    }
+  .link {
+    display: none;
+  }
 }
 
 
