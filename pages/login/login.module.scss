@@ -15,3 +15,19 @@
     }
   }
 }
+@media screen and (max-width: 375px){
+  .container {
+    max-width: var(--width-tablet);
+
+    .loginFormWrapper{
+      width: 100%;
+      form{
+        input{
+          font-size: 17px;
+          padding-left: 25px;
+          max-width: var(--width-mobile) ;
+        }
+      }
+    }
+  }
+}

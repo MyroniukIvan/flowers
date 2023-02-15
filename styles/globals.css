@@ -29,7 +29,7 @@
 
 
 * {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -73,6 +73,7 @@ input {
     height: 63px;
 }
 .container{
+    height: 100%;
     margin: 0 auto;
     max-width: 1421px;;
 }
@@ -98,4 +99,18 @@ input {
     }
 }
 
+@media screen and (max-width: 375px){
+    .--btn-success {
+        margin-top: 10px;
+        color: #fff;
+        background: #956D84;
+        box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 7px;
+        width: 110px;
+        height: 35px;
+    }
+    .--btn-success:last-child {
+        margin-bottom: 10px;
+    }
+}
 

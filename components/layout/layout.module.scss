@@ -1,9 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 1421px;
   margin: 0 auto;
-  overflow-x: hidden;
 }
 
 @media screen and (max-width: 1024px) {

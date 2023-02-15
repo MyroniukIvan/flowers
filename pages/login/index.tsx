@@ -3,10 +3,7 @@ import styles from './login.module.scss'
 
 import {FaFacebook, FaGoogle} from "react-icons/fa";
 import {
-    FacebookAuthProvider,
-    GoogleAuthProvider,
-    signInWithEmailAndPassword,
-    signInWithPopup, signInWithRedirect
+    FacebookAuthProvider, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signInWithRedirect
 } from "@firebase/auth";
 import {useRouter} from "next/navigation";
 import {auth} from "../../firebase/config";
@@ -64,24 +61,25 @@ const Index = () => {
                 const credential = FacebookAuthProvider.credentialFromError(error);
             })
     }
-    return (
-        <Layout criteria={true}>
-            <div className={styles.loginFormWrapper}>
-                <h2>Вход</h2>
-                <form onSubmit={loginUser}>
-                    <input onChange={(e) => setEmail(e.target.value)}
-                           value={email} placeholder='Email' required
-                           type="email"/>
-                    <input onChange={(e) => setPassword(e.target.value)}
-                           value={password} placeholder='Пароль' required
-                           type="password"/>
-                    <button className='--btn-success' type="submit">вход
-                    </button>
-                </form>
-                <button onClick={signInWithGoogle} className='--btn-success'>
-                    <FaGoogle/></button>
-                <button onClick={signInFacebook} className='--btn-success'>
-                    <FaFacebook/></button>
+    return (<Layout criteria={true}>
+            <div className={styles.container}>
+                <div className={styles.loginFormWrapper}>
+                    <h2>Вход</h2>
+                    <form onSubmit={loginUser}>
+                        <input onChange={(e) => setEmail(e.target.value)}
+                               value={email} placeholder='Email' required
+                               type="email"/>
+                        <input onChange={(e) => setPassword(e.target.value)}
+                               value={password} placeholder='Пароль' required
+                               type="password"/>
+                        <button className='--btn-success' type="submit">вход
+                        </button>
+                    </form>
+                    <button onClick={signInWithGoogle} className='--btn-success'>
+                        <FaGoogle/></button>
+                    <button onClick={signInFacebook} className='--btn-success'>
+                        <FaFacebook/></button>
+                    </div>
             </div>
         </Layout>
 

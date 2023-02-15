@@ -81,3 +81,53 @@ export const promotion = [
         src: `purpleFlower`,
     },
 ]
+
+export const currency = [
+    {
+        id: 1,
+        type: 'UAH'
+    },  {
+        id: 2,
+        type: '$'
+    },  {
+        id: 3,
+        type: 'canadian $'
+    },  {
+        id: 4,
+        type: 'EURO'
+    },
+]
+
+export const accordionDetails = [
+    {
+       name: "Букеты из роз",
+       id:1,
+    }, {
+       name: "Букеты из роз",
+       id:2,
+    }, {
+       name: "Букеты из роз",
+       id:3,
+    }, {
+       name: "Букеты из роз",
+       id:4,
+    }, {
+       name: "Букеты из роз",
+       id:5,
+    }, {
+       name: "Букеты из роз",
+       id:6,
+    }, {
+       name: "Букеты из роз",
+       id:7,
+    }, {
+       name: "Букеты из роз",
+       id:8,
+    }, {
+       name: "Букеты из роз",
+       id:9,
+    }, {
+       name: "Букеты из роз",
+       id:10,
+    },
+]

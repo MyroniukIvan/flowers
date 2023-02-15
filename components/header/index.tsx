@@ -80,9 +80,9 @@ const Index = () => {
                 <Image className={styles.line} src={line} alt="line"/>
                 <div className={styles.headerMainRegistration}>
                     <ShowOnLogout>
-                        <Image src={user} alt={'user'}/>
+                        <Link href='/login'><Image src={user} alt={'user'}/></Link>
                         <Link className={styles.link} href='/login'>Вход</Link>
-                        <Link href='/login'><Image className={styles.line} src={line} alt="line"/></Link>
+                        <Image className={styles.line} src={line} alt="line"/>
                         <Link className={styles.link} href='/auth'>Регистрация</Link>
                     </ShowOnLogout>
 
