@@ -12,13 +12,16 @@ import Notiflix from 'notiflix';
 import {FaEdit, FaTrash} from "react-icons/fa";
 import Link from "next/link";
 
-const ViewProducts = () => {
+const ViewProducts = ({product}) => {
     const {data} = useFetch("flowers", "name")
     const flowers = useSelector(selectFlowers)
     const dispatch = useDispatch()
 
-    console.log(data)
-    console.log(flowers)
+    useEffect(() => {
+        dispatch(STORE_FLOWERS({
+            products: data
+        }))
+    }, [dispatch, data])
 
 
     const deleteProduct = async (id, imageURL) => {
@@ -38,7 +41,8 @@ const ViewProducts = () => {
             'Так, видалити.',
             'Ні',
             function okCb() {
-                deleteProduct(id, imageURL).then(() => alert('Товар видаленно'))
+                deleteProduct(id, imageURL)
+
             },
             function cancelCb() {
                 alert('Ок, нехай буде');
@@ -54,14 +58,10 @@ const ViewProducts = () => {
         );
     }
 
-    useEffect(() => {
-        dispatch(STORE_FLOWERS({
-            products: data
-        }))
-    }, [dispatch, data])
 
 
-    console.log(data)
+
+
     return (
         <>
             <AdminNavbar/>
@@ -78,7 +78,8 @@ const ViewProducts = () => {
                             <th>Колір</th>
                             <th>Тип</th>
                             <th>Ціна</th>
-                            <th>Початкова ціна</th>
+                            <th>Знижка %</th>
+                            <th>Остаточна сума</th>
                             <th>Керування</th>
                         </tr>
                         </thead>
@@ -114,11 +115,14 @@ const ViewProducts = () => {
                                         {price}
                                     </td>
                                     <td>
-                                        {discount}
+                                        {discount}%
+                                    </td>
+                                    <td>
+                                        {price-(price * discount/100)}
                                     </td>
 
                                     <td className={styles.icons}>
-                                        <Link href={`/admin/addProduct/${id}`}>
+                                        <Link href={`/admin/editProduct/${id}`}>
                                             <FaEdit color='black' size={20}/>
                                         </Link>
                                         <Link href='/admin/viewProducts'>
@@ -137,4 +141,8 @@ const ViewProducts = () => {
         </>);
 }
 
+
+
+
 export default ViewProducts;
+

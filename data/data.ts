@@ -126,3 +126,18 @@ export const accordionDetails = [
     },{
         name: "Летние букеты", id: 10,
     },]
+
+export const flowersType = [
+    { id: 1, name: 'Роза' },
+    { id: 2, name: 'Тюльпан' },
+    { id: 3, name: 'Лілія' },
+    { id: 4, name: 'Хризантема' },
+    { id: 5, name: 'Орхідея' },
+    { id: 6, name: 'Ірис' },
+    { id: 7, name: 'Гвоздика' },
+    { id: 8, name: 'Жовтий нарцис' },
+    { id: 9, name: 'Соняшник' },
+    { id: 10, name: 'Півонія' },
+    { id: 11, name: 'Гортензія' },
+    { id: 12, name: 'Гербера' }
+];
