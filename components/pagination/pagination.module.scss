@@ -1,0 +1,13 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 27px;
+  &__secondary_cart {
+    display: none;
+  }
+  button {
+    outline: none;
+    border: none;
+    background: white;
+  }
+}

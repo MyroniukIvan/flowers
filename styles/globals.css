@@ -73,10 +73,25 @@ input {
     margin-top: 20px;
     color: #fff;
     background: #956D84;
-    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.15);
     border-radius: 7px;
     width: 220px;
     height: 63px;
+    cursor: pointer;
+    transition: 0.3s all;
+    text-transform:uppercase;
+    font-weight: bold;
+}
+
+.--btn-success:hover {
+    margin-top: 20px;
+    color: #fff;
+    background: #735264;
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+    width: 220px;
+    height: 63px;
+    text-transform:uppercase;
 }
 .container{
     margin: 0 auto;
@@ -240,11 +255,11 @@ input {
     color: white;
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
     html {
         background: #a8a8a8;
     }
-}
+}*/
 
 @media screen and (max-width: 375px){
     .--btn-success {

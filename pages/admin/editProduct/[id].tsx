@@ -1,60 +1,38 @@
-import Layout from "../../components/layout/Layout";
-import styles from './formStyle.module.scss'
-import {useState} from "react";
+import {useRouter} from 'next/router'
+import {useEffect, useState} from "react";
+import {useSelector} from "react-redux";
+import {selectFlowers} from "../../../redux/slice/productSlice";
+import {db, storage} from "../../../firebase/config";
 import {
     deleteObject,
     getDownloadURL,
     ref,
     uploadBytesResumable
 } from "@firebase/storage";
-import {db, storage} from "../../firebase/config";
-import {addDoc, collection, setDoc, Timestamp,doc} from "@firebase/firestore";
+import {setDoc, Timestamp} from "@firebase/firestore";
+import {doc} from "firebase/firestore";
+import Layout from "../../../components/layout/Layout";
+import styles from "../formStyle.module.scss"
+import {flowersType} from "../../../data/data";
 
-import {} from "firebase/firestore";
-import {flowersType} from "../../data/data";
-import {useRouter} from "next/navigation";
+const EditProduct =()=> {
+    const router = useRouter()
+    const {id}  = router.query as {id: string};
 
-const AddProduct = () => {
-    const [product, setProduct] = useState({
-        name:'',
-        flower:'',
-        color:'',
-        type:'',
-        imageURL:'',
-        price:null as any,
-        discount:null as any,
-    });
-    const navigate = useRouter()
+    const flowers = useSelector(selectFlowers)
+    const currentProduct = flowers.find((flower) => flower.id === id)
 
-    console.log(product)
-    const handleInputChange = (e) => {
-        const {name,value}=e.target
 
-        setProduct({...product,[name]:value})
-    }
-    const handleImageChange = (e) => {
-        const file = e.target.files[0]
-        const storageRef = ref(storage, `flowers/${Date.now()}${file.name}`);
-        const uploadTask = uploadBytesResumable(storageRef, file);
-
-        uploadTask.on('state_changed', (snapshot) => {
-
-        }, (error) => {
-            alert(error.message)
-        }, () => {
-
-            getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                setProduct({...product, imageURL: downloadURL})
-                alert('success')
-            });
-        });
-    }
-
-    const addProduct =(e)=>{
+    const [product, setProduct] = useState(currentProduct);
+    const editProduct=(e)=> {
         e.preventDefault()
+        if (flowers.imageURL !== currentProduct.imageURL ){
+            const storageRef=ref(storage, currentProduct.imageURL);
+            deleteObject(storageRef)
+        }
 
         try {
-            const docRef = addDoc(collection(db,'flowers'),{
+            setDoc(doc(db,'flowers',id),{
                 name:product.name,
                 imageURL:product.imageURL,
                 flower:product.flower,
@@ -64,21 +42,52 @@ const AddProduct = () => {
                 discount:product.discount,
                 createdAt: Timestamp.now().toDate()
             })
-            setProduct({...product})
-            alert('success')
-            navigate.push('/admin/addProduct')
         } catch (error){
-            alert('error')
+            console.log('error')
         }
+
     }
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0]
+        const storageRef = ref(storage, `willow/${Date.now()}${file.name}`);
+        const uploadTask = uploadBytesResumable(storageRef, file);
+
+        uploadTask.on('state_changed', (snapshot) => {
+
+
+        }, (error) => {
+
+        }, () => {
+
+            getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                setProduct({...product, imageURL: downloadURL})
+            });
+        });
+    };
+
+    const handleInputChange = (e) => {
+        const {name, value} = e.target
+        if (e.target.checked) {
+            // в селектах в лог виводить else блок - not checked, можна просто удалити лог і все гуд!
+            setProduct({...product, [name]: value})
+        } else {
+            setProduct(product)
+        }
+        setProduct({...product, [name]: value})
+    };
+
+
 
 
     return (
         <Layout criteria={false}>
+
             <div className={styles.addProduct}>
-                <h1>Добавити товар</h1>
+                <img src={currentProduct.imageURL} alt=""/>
+                <h1>Редагування товару</h1>
                 <div>
-                    <form onSubmit={addProduct} className={styles.input__list} action="">
+                    <form onSubmit={editProduct} className={styles.input__list} action="">
                         <div className={styles.input__list_wrapper}>
                             <label>Назва товара</label>
                             <input type="text"
@@ -149,33 +158,30 @@ const AddProduct = () => {
                             <label>Ціна</label>
                             <input
                                 type="number"
-                                placeholder="Ціна"
+                                placeholder="Цена"
                                 name="price"
                                 required
                                 value={product.price}
                                 onChange={(e => handleInputChange(e))}
 
-                            />
-                        </div>
+                            /></div>
                         <div className={styles.input__list_wrapper}>
-                            <label>Знижка % </label>
+                            <label>Знижка</label>
                             <input
                                 type="number"
-                                placeholder="Знижка %"
+                                placeholder="Скидка"
                                 name="discount"
                                 required
                                 value={product.discount}
                                 onChange={(e => handleInputChange(e))}
 
-                            />
-                        </div>
-
+                            /></div>
                         <button className='--btn-success'>Сохранить</button>
                     </form>
                 </div>
             </div>
         </Layout>
-    );
+    )
 }
+export default EditProduct
 
-export default AddProduct;
