@@ -17,7 +17,6 @@ const Index = () => {
                 <Promotion filter={item =>item.discount>0} title={'Акції'}/>
                 <Promotion filter={item =>item.type==='подарунок'} title={'Подарунки'}/>
 
-
                 <Forum/>
                 <Map/>
             </div>
