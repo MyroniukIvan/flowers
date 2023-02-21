@@ -1,48 +1,45 @@
 import {useRouter} from 'next/router'
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {useSelector} from "react-redux";
-import {selectFlowers} from "../../../redux/slice/productSlice";
-import {db, storage} from "../../../firebase/config";
+import {selectFlowers} from "../../redux/slice/productSlice";
+import {db, storage} from "../../firebase/config";
 import {
-    deleteObject,
-    getDownloadURL,
-    ref,
-    uploadBytesResumable
+    deleteObject, getDownloadURL, ref, uploadBytesResumable
 } from "@firebase/storage";
 import {setDoc, Timestamp} from "@firebase/firestore";
 import {doc} from "firebase/firestore";
-import Layout from "../../../components/layout/Layout";
-import styles from "../formStyle.module.scss"
-import {flowersType} from "../../../data/data";
+import Layout from "../../components/layout/Layout";
+import styles from "./formStyle.module.scss"
+import {flowersType} from "../../data/data";
 
-const EditProduct =()=> {
+const EditProduct = () => {
     const router = useRouter()
-    const {id}  = router.query as {id: string};
+    const {id} = router.query as { id: string };
 
     const flowers = useSelector(selectFlowers)
     const currentProduct = flowers.find((flower) => flower.id === id)
 
 
-    const [product, setProduct] = useState(currentProduct);
-    const editProduct=(e)=> {
+    const [product, setProduct] = useState(currentProduct || {});
+    const editProduct = (e) => {
         e.preventDefault()
-        if (flowers.imageURL !== currentProduct.imageURL ){
-            const storageRef=ref(storage, currentProduct.imageURL);
+        if (flowers.imageURL !== currentProduct.imageURL) {
+            const storageRef = ref(storage, currentProduct.imageURL);
             deleteObject(storageRef)
         }
 
         try {
-            setDoc(doc(db,'flowers',id),{
-                name:product.name,
-                imageURL:product.imageURL,
-                flower:product.flower,
-                color:product.color,
-                type:product.type,
-                price:product.price,
-                discount:product.discount,
+            setDoc(doc(db, 'flowers', id), {
+                name: product.name,
+                imageURL: product.imageURL,
+                flower: product.flower,
+                color: product.color,
+                type: product.type,
+                price: product.price,
+                discount: product.discount,
                 createdAt: Timestamp.now().toDate()
             })
-        } catch (error){
+        } catch (error) {
             console.log('error')
         }
 
@@ -78,16 +75,13 @@ const EditProduct =()=> {
     };
 
 
-
-
     return (
         <Layout criteria={false}>
-
             <div className={styles.addProduct}>
                 <img src={currentProduct.imageURL} alt=""/>
                 <h1>Редагування товару</h1>
                 <div>
-                    <form onSubmit={editProduct} className={styles.input__list} action="">
+                    <form onSubmit={editProduct} className={styles.input__list} action="pages/admin/[id]">
                         <div className={styles.input__list_wrapper}>
                             <label>Назва товара</label>
                             <input type="text"
@@ -104,7 +98,7 @@ const EditProduct =()=> {
                                    placeholder='Изображение товара'
                                    name='image'
                                 //required
-                                   onChange={(e)=>handleImageChange(e)}
+                                   onChange={(e) => handleImageChange(e)}
                             />
                             {product.imageURL === '' ? null : (<input
                                 type="text"
@@ -122,8 +116,8 @@ const EditProduct =()=> {
                                 value={product.flower}
                                 onChange={(e => handleInputChange(e))}
                             >
-                                {flowersType.map((item,index)=>{
-                                    return(<option key={index} value={item.name}>{item.name}</option>)
+                                {flowersType.map((item, index) => {
+                                    return (<option key={index} value={item.name}>{item.name}</option>)
                                 })
 
                                 }
@@ -137,7 +131,7 @@ const EditProduct =()=> {
                                 value={product.color}
                                 onChange={(e => handleInputChange(e))}
                             >
-                                <option value="black">black </option>
+                                <option value="black">black</option>
                                 <option value="white">White</option>
                             </select>
                         </div>
@@ -180,8 +174,7 @@ const EditProduct =()=> {
                     </form>
                 </div>
             </div>
-        </Layout>
-    )
+        </Layout>)
 }
 export default EditProduct
 

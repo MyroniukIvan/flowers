@@ -6,23 +6,18 @@ import Map from './components/map'
 import Layout from "../../components/layout/Layout";
 
 
-
-
 const Index = () => {
     return (
         <Layout criteria={true}>
             <div className="container">
                 <ImagesContainer/>
-
-                <Promotion filter={item =>item.discount>0} title={'Акції'}/>
-                <Promotion filter={item =>item.type==='подарунок'} title={'Подарунки'}/>
-
+                <Promotion filter={item => item.discount > 0} title={'Акції'}/>
+                <Promotion filter={item => item.type === 'подарунок'} title={'Подарунки'}/>
                 <Forum/>
                 <Map/>
             </div>
 
-        </Layout>
-    );
+        </Layout>);
 };
 
 export default Index;
