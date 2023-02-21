@@ -23,7 +23,7 @@ const EditProduct =()=> {
     const currentProduct = flowers.find((flower) => flower.id === id)
 
 
-    const [product, setProduct] = useState(currentProduct);
+    const [product, setProduct] = useState(currentProduct || {});
     const editProduct=(e)=> {
         e.preventDefault()
         if (flowers.imageURL !== currentProduct.imageURL ){
