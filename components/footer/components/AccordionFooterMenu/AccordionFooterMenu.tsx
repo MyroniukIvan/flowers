@@ -10,22 +10,20 @@ import Personal from "../Personal";
 import Additionally from "../Additionally";
 import {createTheme, ThemeProvider} from "@mui/material";
 
-
+const theme = createTheme({
+    palette: {
+        mode: 'dark',
+        primary: {
+            main: '#3f51b5',
+        },
+        secondary: {
+            main: '#f50057',
+        },
+    },
+})
 
 
 export default function AccordionFooterMenu() {
-
-    const theme = createTheme({
-        palette: {
-            mode: 'dark',
-            primary: {
-                main: '#3f51b5',
-            },
-            secondary: {
-                main: '#f50057',
-            },
-        },
-    })
     return (
         <ThemeProvider theme={theme}>
             <div>

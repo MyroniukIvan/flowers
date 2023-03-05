@@ -14,14 +14,21 @@ import {
 } from "../../../../redux/slice/productSlice";
 
 
-const Index = ({title,products,flowers}) => {
+const Index = ({filter,title}) => {
     const [currentPage, setCurrentPage] = useState(0);
+    const {data} = useFetch("flowers", "name")
+    const flowers = useSelector(selectFlowers)
+    const dispatch = useDispatch()
 
+    useEffect(() => {
+        dispatch(STORE_FLOWERS({
+            products: data
+        }))
+    }, [dispatch, data])
+
+    const promotionalProduct = flowers.filter(filter).slice(currentPage *8,(currentPage+1)*8)
 
     const numPage = Math.ceil(flowers.length / 8)
-
-    const currentProducts=products.slice(currentPage *8,(currentPage+1)*8)
-
 
     const handleClickNext =()=>{
         if (currentPage===numPage-1){
@@ -52,7 +59,7 @@ const Index = ({title,products,flowers}) => {
                 </div>
             </div>
             <div className={styles.parent}>
-                { currentProducts.map((el, index) => {
+                { promotionalProduct.map((el, index) => {
                     return (
                         <div key={index} className={styles.child}>
                             {/*img container*/}
